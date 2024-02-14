@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeSec"
+        android:icon="@drawable/baseline_home_24"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:title="Home" />
+    <item
+        android:id="@+id/nutritionAndDietSec"
+        android:icon="@drawable/diet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:title="Diet" />
+    <item
+        android:id="@+id/testSec"
+        android:icon="@drawable/test"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:title="Test" />
+</menu>
