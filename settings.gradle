@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Pregnancy Help - Comprehensive Guide"
+rootProject.name = "ZenMom - Pregnancy Wellness"
 include ':app'

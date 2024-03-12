@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="primary">#F3F3F3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="primary">#FFFFFF</color>
+    <color name="bg">#F7FEFF</color>
     <color name="textColor">#2E7D32</color>
     <color name="noticeColor">#1D7121</color>
+    <color name="headingColor">#CC0045</color>
     <color name="linkColor">#08008FFF</color>
+
+    <color name="splash">#50E3C2</color>
 </resources>

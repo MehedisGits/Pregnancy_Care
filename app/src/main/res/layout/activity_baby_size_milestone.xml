@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".BabySizeMilestone">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/second_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutBabySize"
+        style="@style/Platform.MaterialComponents.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="@color/primary"
+        android:elevation="8dp"
+        app:tabIndicatorColor="@color/textColor"
+        app:tabInlineLabel="true"
+        app:tabMode="scrollable"
+        app:tabTextColor="@color/textColor"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pagerIdBabySize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabLayoutBabySize"
+        android:contentDescription="@string/babySIzeTitle">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+</RelativeLayout>

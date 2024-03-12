@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary"
+    android:background="@color/bg"
     android:orientation="vertical"
     tools:context=".PrenatalNutrition">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/second_toolbar" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,50 +16,48 @@
         android:contentDescription="Guide description">
 
         <LinearLayout
+            android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
 
-            >
+            android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="180dp">
 
-                <ImageView
-                    android:id="@+id/guideCover"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/prenatal_nutrition" />
-
-                <TextView
-                    android:id="@+id/textView36"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginRight="8sp"
-                    android:text="@string/pC"
-                    android:textSize="8dp" />
-
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/guideHeading"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="4dp"
-                android:text="@string/prenatalNutritionHeading"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/textColor" />
+                android:layout_margin="@dimen/_6sdp"
+                app:cardCornerRadius="@dimen/_8sdp"
+                app:cardElevation="8dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/imageV"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_160sdp"
+                        android:contentDescription="@string/pC"
+                        android:scaleType="centerCrop"
+                        />
 
-            <com.google.android.material.divider.MaterialDivider
-                android:layout_width="match_parent"
-                android:layout_height="2dp"/>
+                    <TextView
+                        android:id="@+id/textView81"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="@string/prenatalNutritionHeading"
+
+                        android:textColor="@color/textColor"
+
+                        android:textSize="@dimen/_15ssp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -71,68 +69,73 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/pd1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black" />
+                 android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/pd2h"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                     android:textColor="@color/textColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/pd2"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black" />
+                 android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/pd3h"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                     android:textColor="@color/textColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/pd3"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black" />
+                 android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <TextView
-                    android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/pd4h"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                     android:textColor="@color/textColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
-                    android:id="@+id/textView10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/pd4"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black" />
+                 android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <TextView
-                    android:id="@+id/textView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/pd5h"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                     android:textColor="@color/textColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
-                    android:id="@+id/textView12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/pd5"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black" />
+                 android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -149,148 +152,149 @@
                 </androidx.cardview.widget.CardView>
 
                 <TextView
-                    android:id="@+id/textView13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/pd6"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/noticeColor" />
+                 android:textColor="@color/noticeColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <TextView
-                    android:id="@+id/textView14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p7h"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                     android:textColor="@color/textColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
-                    android:id="@+id/textView15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p7"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black" />
+                 android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <TextView
-                    android:id="@+id/textView16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p8h"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                     android:textColor="@color/textColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
-                    android:id="@+id/textView17"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p8"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black" />
+                 android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <TextView
-                    android:id="@+id/textView18"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:text="@string/p8d"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/noticeColor" />
+                 android:textColor="@color/noticeColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <TextView
-                    android:id="@+id/textView19"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p9h"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                     android:textColor="@color/textColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
-                    android:id="@+id/textView20"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p9"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black" />
+                 android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <TextView
-                    android:id="@+id/textView21"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p10h"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                     android:textColor="@color/textColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
-                    android:id="@+id/textView22"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p10"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black" />
+                 android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <TextView
-                    android:id="@+id/textView23"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p11h"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                     android:textColor="@color/textColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
-                    android:id="@+id/textView24"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p11"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black" />
+                 android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <TextView
-                    android:id="@+id/textView25"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p12h"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                     android:textColor="@color/textColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
-                    android:id="@+id/textView26"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p12"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black" />
+                 android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <TextView
-                    android:id="@+id/textView27"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p13h"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                     android:textColor="@color/textColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
-                    android:id="@+id/textView28"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p13"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black" />
+                 android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
 
                 <TextView
-                    android:id="@+id/textView29"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p14h"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                     android:textColor="@color/textColor"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_14ssp" />
 
                 <TextView
-                    android:id="@+id/textView30"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/p14"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/black" />
+                 android:textColor="@color/black"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_12ssp" />
             </LinearLayout>
 
             <View
@@ -317,13 +321,13 @@
                     android:padding="4dp">
 
                     <TextView
-                        android:id="@+id/textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="4dp"
                         android:text="@string/dataSourceText"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                         android:textColor="@color/noticeColor"
+                        android:textIsSelectable="true"
                         android:textStyle="bold" />
 
                     <TextView
@@ -377,7 +381,7 @@
                             android:background="@color/linkColor"
                             android:padding="4dp"
                             android:text="@string/sl3"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                             android:textColor="@color/black"
                             android:textIsSelectable="true"
                             android:textSize="12sp" />
@@ -396,7 +400,7 @@
                             android:background="@color/linkColor"
                             android:padding="4dp"
                             android:text="@string/sl4"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                             android:textColor="@color/black"
                             android:textIsSelectable="true"
                             android:textSize="12sp" />
@@ -415,19 +419,20 @@
                             android:background="@color/linkColor"
                             android:padding="4dp"
                             android:text="@string/sl5"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
                             android:textColor="@color/black"
                             android:textIsSelectable="true"
                             android:textSize="12sp" />
 
-                        <TextView
-                            android:id="@+id/textView37"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:text="More" />
                     </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/seeMoreINPrenatal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center"
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -439,7 +444,7 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/dropdownBtnPrenatal"
+                    android:id="@+id/dropdownBtnAlco"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="end"
@@ -452,9 +457,9 @@
                     tools:ignore="TouchTargetSizeCheck">
 
                     <ImageView
-                        android:id="@+id/dorpdownImagePrenatal"
-                        android:layout_width="60dp"
-                        android:layout_height="38dp"
+                        android:id="@+id/dorpdownCComplaints"
+                        android:layout_width="48dp"
+                        android:layout_height="32dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/baseline_arrow_drop_down_24" />
                 </androidx.cardview.widget.CardView>

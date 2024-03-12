@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/baseline_share_24"
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="@string/shareTitle" />
+    <item
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/outline_feedback_24"
+        android:title="Feedback to Developer" />
+    <item
+        android:icon="@drawable/terms"
+        android:id="@+id/terms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Terms and conditions" />
+    <item
+        android:icon="@drawable/outline_privacy_tip_24"
+        android:id="@+id/privacy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:title="Privacy Policy" />
+    <item
+        android:icon="@drawable/about"
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:title="About us" />
+</menu>
