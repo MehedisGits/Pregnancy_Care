@@ -37,7 +37,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         // Bind data to the ViewHolder
         String heading = arrayList.get(position).get("title").toString();
         holder.guideTitle.setText(heading);
-        holder.guideImage.setImageResource(R.drawable.lovely_pregnancy);
+        holder.guideImage.setImageResource(R.drawable.sweetpregnancy);
     }
 
     @Override

@@ -19,14 +19,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/lottiAnim"
+        <include
+            layout="@layout/lottie"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_200sdp"
-            android:layout_marginBottom="20dp"
-            android:background="@android:color/transparent"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/pregnant" />
+            android:layout_height="wrap_content" />
+
 
         <TextView
             android:id="@+id/textView83"
@@ -53,22 +50,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ProgressBar
-            android:id="@+id/progressBar2"
-            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+        <LinearLayout
+            android:id="@+id/progressLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:progressBackgroundTint="@color/splash"
-            android:progressBackgroundTintMode="screen"
-            android:progressTint="#FFFFFF"
-            android:visibility="visible" />
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/textView79"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -79,5 +71,4 @@
             android:textSize="@dimen/_10ssp" />
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout
-   >
+</androidx.constraintlayout.widget.ConstraintLayout>

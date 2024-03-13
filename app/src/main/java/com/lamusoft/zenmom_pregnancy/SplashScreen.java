@@ -1,22 +1,24 @@
 package com.lamusoft.zenmom_pregnancy;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.Window;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.airbnb.lottie.LottieAnimationView;
-
 public class SplashScreen extends AppCompatActivity {
 
-    private LottieAnimationView lottiAnim;
-    private ProgressBar progressBar2;
+    LinearLayout progressLayout;
+    private ProgressBar progressBar;
     private int progress;
 
     @Override
@@ -36,17 +38,28 @@ public class SplashScreen extends AppCompatActivity {
         });*/
 
         // Initialize views
-        lottiAnim = findViewById(R.id.lottiAnim);
-        progressBar2 = findViewById(R.id.progressBar2);
+        progressLayout = findViewById(R.id.progressLayout);
 
-        // Start the Lottie animation
-        lottiAnim.playAnimation();
-
-        // Start a thread to perform background work
         new Thread(() -> {
-            doWork();
+            if (Build.VERSION.SDK_INT != Build.VERSION_CODES.LOLLIPOP) {
+                // Inflate the layout containing the ProgressBar
+                LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
+                View view = inflater.inflate(R.layout.splash_progress_res, progressLayout, false);
+
+                // Add the inflated layout to the progressLayout LinearLayout
+                progressLayout.addView(view);
+
+                // Find the ProgressBar within the inflated layout
+                progressBar = view.findViewById(R.id.splashProgress);
+
+                // Perform background work
+                doWork();
+            }
+            // Start the main activity regardless of the Android version
             startMainActivity();
         }).start();
+
+
     }
 
     private void doWork() {
@@ -55,7 +68,7 @@ public class SplashScreen extends AppCompatActivity {
                 // Simulate work being done
                 Thread.sleep(500);
                 // Update the progress bar on the UI thread
-                updateProgressBar(progress);
+                runOnUiThread(() -> updateProgressBar(progress)); // Post updates to the UI thread
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -64,7 +77,7 @@ public class SplashScreen extends AppCompatActivity {
 
     private void updateProgressBar(final int progress) {
         // Update progress on the UI thread
-        runOnUiThread(() -> progressBar2.setProgress(progress));
+        runOnUiThread(() -> progressBar.setProgress(progress));
     }
 
     private void startMainActivity() {

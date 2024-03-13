@@ -58,7 +58,7 @@
                             android:layout_margin="2dp"
                             android:importantForAccessibility="no"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/healthy_pregnancy"
+                            android:src="@drawable/sweetpregnancy"
                             />
                     </LinearLayout>
 
