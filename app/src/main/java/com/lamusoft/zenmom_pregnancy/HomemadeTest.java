@@ -28,6 +28,9 @@ public class HomemadeTest extends AppCompatActivity {
         share.setImageResource(R.drawable.baseline_share_24);
         share.setOnClickListener(v -> ShareIntent.shareApp(HomemadeTest.this));
 
+        ImageView wheatImageV = findViewById(R.id.wheatImageV);
+        wheatImageV.setImageResource(R.drawable.wheat);
+
         setClickListeners();
     }
 

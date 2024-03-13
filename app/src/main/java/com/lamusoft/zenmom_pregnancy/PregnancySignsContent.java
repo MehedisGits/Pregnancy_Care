@@ -49,7 +49,7 @@ public class PregnancySignsContent extends AppCompatActivity {
         // Set up share button
         ImageView share = findViewById(R.id.disclaimerBtn);
         share.setImageResource(R.drawable.baseline_share_24);
-        share.setOnClickListener(v -> ShareIntent.shareApp(getApplicationContext()));
+        share.setOnClickListener(v -> ShareIntent.shareApp(PregnancySignsContent.this));
     }
 
     @Override

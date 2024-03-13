@@ -10,7 +10,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_160sdp"
+        android:layout_height="@dimen/_180sdp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="10dp"
@@ -21,8 +21,7 @@
         <LinearLayout
             android:id="@+id/i"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/textbgcircle">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/imageV"

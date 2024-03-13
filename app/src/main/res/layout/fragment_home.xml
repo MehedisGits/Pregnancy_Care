@@ -8,6 +8,14 @@
     android:orientation="vertical"
     tools:context=".HomeFragment">
 
+    <!--Banner Adview for next update-->
+
+    <!--        <com.google.android.gms.ads.AdView
+                android:id="@+id/bannerHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="8dp" />-->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -72,7 +80,7 @@
                         android:gravity="center_vertical"
                         android:text="@string/guideTitle"
                         android:textColor="@color/textColor"
-                        android:textSize="@dimen/_14ssp" />
+                        android:textSize="@dimen/_13ssp" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -128,7 +136,7 @@
                                 android:gravity="center"
                                 android:text="@string/babySIzeTitle"
                                 android:textColor="#2E7D32"
-                                android:textSize="@dimen/_14ssp" />
+                                android:textSize="@dimen/_13ssp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -180,7 +188,7 @@
                                 android:gravity="center|center_vertical"
                                 android:text="@string/babyGrowthTitle"
                                 android:textColor="#2E7D32"
-                                android:textSize="@dimen/_14ssp" />
+                                android:textSize="@dimen/_13ssp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -238,7 +246,7 @@
                                 android:gravity="center"
                                 android:text="@string/partnerSupport"
                                 android:textColor="#2E7D32"
-                                android:textSize="@dimen/_14ssp" />
+                                android:textSize="@dimen/_13ssp" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -288,7 +296,7 @@
                                 android:gravity="center"
                                 android:text="@string/nutritionTtile"
                                 android:textColor="#2E7D32"
-                                android:textSize="@dimen/_14ssp" />
+                                android:textSize="@dimen/_13ssp" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -343,7 +351,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_marginStart="8dp"
+
                         android:gravity="center"
                         android:orientation="horizontal">
 
@@ -354,7 +362,7 @@
                             android:layout_weight="1"
                             android:text="@string/testkitguide"
                             android:textColor="@color/textColor"
-                            android:textSize="@dimen/_14ssp" />
+                            android:textSize="@dimen/_13ssp" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -401,7 +409,7 @@
                                 android:gravity="center"
                                 android:text="@string/Urine"
                                 android:textColor="@color/textColor"
-                                android:textSize="@dimen/_14ssp" />
+                                android:textSize="@dimen/_13ssp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -443,7 +451,7 @@
                                 android:maxLines="2"
                                 android:text="@string/HomeMade"
                                 android:textColor="@color/textColor"
-                                android:textSize="@dimen/_14ssp" />
+                                android:textSize="@dimen/_13ssp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -493,7 +501,7 @@
                                 android:gravity="center"
                                 android:text="@string/Signs"
                                 android:textColor="@color/textColor"
-                                android:textSize="@dimen/_14ssp" />
+                                android:textSize="@dimen/_13ssp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -535,7 +543,7 @@
                                 android:gravity="center_vertical"
                                 android:text="@string/more"
                                 android:textColor="@color/textColor"
-                                android:textSize="@dimen/_14ssp" />
+                                android:textSize="@dimen/_13ssp" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -546,13 +554,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <!--Banner Adview for next update-->
 
-<!--    <com.google.android.gms.ads.AdView
-        android:id="@+id/bannerHome"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        android:layout_margin="8dp" />-->
 
 </LinearLayout>
