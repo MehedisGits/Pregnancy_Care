@@ -17,7 +17,7 @@
         <LinearLayout
             android:id="@+id/layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
 
@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
-                android:background="@drawable/textbgcircle"
+                android:background="@drawable/bg_circle"
                 android:gravity="center"
                 android:padding="8dp"
                 android:text="@string/earlySigns"
@@ -44,12 +44,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/_6sdp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="@dimen/_3sdp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/bg"
+                    android:backgroundTint="@color/primary"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="2dp">
@@ -58,17 +59,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                             android:layout_width="@dimen/_36sdp"
                             android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="4dp"
+                            android:layout_margin="@dimen/_6sdp"
+                            android:contentDescription="@string/offline_dialog_image_description"
                             android:src="@drawable/missed_period" />
 
                         <TextView
                             android:id="@+id/textView76"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_marginTop="3dp"
                             android:layout_marginEnd="3dp"
@@ -85,31 +88,34 @@
                     android:id="@+id/morningSickness"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="@dimen/_6sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/bg"
+                    android:backgroundTint="@color/primary"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
                     app:cardCornerRadius="@dimen/_6sdp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                            android:layout_width="@dimen/_36sdp"
                             android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="4dp"
+                            android:layout_margin="@dimen/_6sdp"
+                            android:contentDescription="@string/offline_dialog_image_description"
                             android:src="@drawable/morning_sickness" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_marginTop="3dp"
                             android:layout_marginEnd="3dp"
@@ -134,30 +140,33 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/_6sdp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="@dimen/_3sdp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/bg"
+                    android:backgroundTint="@color/primary"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
-                              android:layout_width="@dimen/_36sdp"
-                        android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="4dp"
+                            android:layout_width="@dimen/_36sdp"
+                            android:layout_height="@dimen/_36sdp"
+                            android:layout_margin="@dimen/_6sdp"
+                            android:contentDescription="@string/offline_dialog_image_description"
                             android:src="@drawable/breast_changes" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_marginTop="3dp"
                             android:layout_marginEnd="3dp"
@@ -174,31 +183,34 @@
                     android:id="@+id/frequentUrination"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="@dimen/_6sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/bg"
+                    android:backgroundTint="@color/primary"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
-                              android:layout_width="@dimen/_36sdp"
-                        android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="4dp"
-                            android:src="@drawable/frequent_urination" />
+                            android:layout_width="@dimen/_36sdp"
+                            android:layout_height="@dimen/_36sdp"
+                            android:layout_margin="@dimen/_6sdp"
+                            android:src="@drawable/frequent_urination"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_marginTop="3dp"
                             android:layout_marginEnd="3dp"
@@ -223,30 +235,33 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/_6sdp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="@dimen/_3sdp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/bg"
+                    android:backgroundTint="@color/primary"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                               android:layout_width="@dimen/_36sdp"
                         android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="4dp"
-                            android:src="@drawable/fatigue" />
+                            android:layout_margin="@dimen/_6sdp"
+                            android:src="@drawable/fatigue"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_marginTop="3dp"
                             android:layout_marginEnd="3dp"
@@ -267,16 +282,17 @@
                     android:layout_marginEnd="12dp"
                     android:layout_marginBottom="6dp"
                     android:layout_weight="1"
-                    android:orientation="vertical" />
+                    android:orientation="vertical"
+                    tools:ignore="UselessLeaf" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/textView75"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_margin="12dp"
                 android:layout_weight="1"
-                android:background="@drawable/textbgcircle"
+                android:background="@drawable/bg_circle"
                 android:gravity="center"
                 android:padding="8dp"
                 android:text="@string/laterSigns"
@@ -293,30 +309,33 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/_6sdp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="@dimen/_3sdp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/bg"
+                    android:backgroundTint="@color/primary"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                               android:layout_width="@dimen/_36sdp"
                         android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="4dp"
-                            android:src="@drawable/increased_appetite" />
+                            android:layout_margin="@dimen/_6sdp"
+                            android:src="@drawable/increased_appetite"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_marginTop="3dp"
                             android:layout_marginEnd="3dp"
@@ -333,31 +352,34 @@
                     android:id="@+id/moodSwing"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="@dimen/_6sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/bg"
+                    android:backgroundTint="@color/primary"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                               android:layout_width="@dimen/_36sdp"
                         android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="4dp"
-                            android:src="@drawable/mood_swing" />
+                            android:layout_margin="@dimen/_6sdp"
+                            android:src="@drawable/mood_swing"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_marginTop="3dp"
                             android:layout_marginEnd="3dp"
@@ -382,30 +404,33 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/_6sdp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="@dimen/_3sdp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/bg"
+                    android:backgroundTint="@color/primary"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                               android:layout_width="@dimen/_36sdp"
                         android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="4dp"
-                            android:src="@drawable/skin_changes" />
+                            android:layout_margin="@dimen/_6sdp"
+                            android:src="@drawable/skin_changes"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_marginTop="3dp"
                             android:layout_marginEnd="3dp"
@@ -422,31 +447,34 @@
                     android:id="@+id/weightGain"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="@dimen/_6sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/bg"
+                    android:backgroundTint="@color/primary"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                               android:layout_width="@dimen/_36sdp"
                         android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="4dp"
-                            android:src="@drawable/weight_gain" />
+                            android:layout_margin="@dimen/_6sdp"
+                            android:src="@drawable/weight_gain"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_marginTop="3dp"
                             android:layout_marginEnd="3dp"
@@ -471,30 +499,33 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="@dimen/_6sdp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/bg"
+                    android:backgroundTint="@color/primary"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                               android:layout_width="@dimen/_36sdp"
                         android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="4dp"
-                            android:src="@drawable/baby_movement" />
+                            android:layout_margin="@dimen/_6sdp"
+                            android:src="@drawable/baby_movement"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_marginTop="3dp"
                             android:layout_marginEnd="3dp"
@@ -511,31 +542,34 @@
                     android:id="@+id/swelling"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="6dp"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
                     android:layout_marginEnd="12dp"
                     android:layout_marginBottom="20dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/bg"
+                    android:backgroundTint="@color/primary"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
                     app:cardCornerRadius="8dp"
-                    app:cardElevation="4dp">
+                    app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                               android:layout_width="@dimen/_36sdp"
                         android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="4dp"
-                            android:src="@drawable/swelling" />
+                            android:layout_margin="@dimen/_6sdp"
+                            android:src="@drawable/swelling"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_marginTop="3dp"
                             android:layout_marginEnd="3dp"

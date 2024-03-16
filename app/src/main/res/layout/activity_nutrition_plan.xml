@@ -28,9 +28,11 @@
             android:id="@+id/firstTrimester"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/textbgcircle"
+            android:background="@drawable/bg_circle"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            tools:ignore="UnusedAttribute">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -42,6 +44,7 @@
                 <ImageView
                     android:layout_width="@dimen/_42sdp"
                     android:layout_height="@dimen/_42sdp"
+                    android:contentDescription="@string/offline_dialog_image_description"
                     android:src="@drawable/diet_plan" />
 
             </androidx.cardview.widget.CardView>
@@ -83,9 +86,11 @@
             android:id="@+id/secondTrimester"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/textbgcircle"
+            android:background="@drawable/bg_circle"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            tools:ignore="UnusedAttribute">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -97,6 +102,7 @@
                 <ImageView
                     android:layout_width="@dimen/_42sdp"
                     android:layout_height="@dimen/_42sdp"
+                    android:contentDescription="@string/offline_dialog_image_description"
                     android:src="@drawable/diet_plan" />
 
             </androidx.cardview.widget.CardView>
@@ -137,9 +143,11 @@
             android:id="@+id/thirdTrimester"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/textbgcircle"
+            android:background="@drawable/bg_circle"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            tools:ignore="UnusedAttribute">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -151,6 +159,7 @@
                 <ImageView
                     android:layout_width="@dimen/_42sdp"
                     android:layout_height="@dimen/_42sdp"
+                    android:contentDescription="@string/offline_dialog_image_description"
                     android:src="@drawable/diet_plan" />
 
             </androidx.cardview.widget.CardView>
@@ -192,9 +201,11 @@
             android:id="@+id/foodstoAvoid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/textbgcircle"
+            android:background="@drawable/bg_circle"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            tools:ignore="UnusedAttribute">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -206,6 +217,7 @@
                 <ImageView
                     android:layout_width="@dimen/_42sdp"
                     android:layout_height="@dimen/_42sdp"
+                    android:contentDescription="@string/offline_dialog_image_description"
                     android:src="@drawable/diet_plan" />
 
             </androidx.cardview.widget.CardView>
@@ -245,9 +257,11 @@
             android:id="@+id/pregnancyBeautytips"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/textbgcircle"
+            android:background="@drawable/bg_circle"
             android:clickable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            tools:ignore="UnusedAttribute">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -259,6 +273,7 @@
                 <ImageView
                     android:layout_width="@dimen/_42sdp"
                     android:layout_height="@dimen/_42sdp"
+                    android:contentDescription="@string/offline_dialog_image_description"
                     android:src="@drawable/diet_plan" />
 
             </androidx.cardview.widget.CardView>

@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar"
         android:background="@color/primary"
-        android:elevation="8dp"
+        android:elevation="@dimen/_2sdp"
         app:tabIndicatorColor="@color/textColor"
         app:tabInlineLabel="true"
         app:tabMode="scrollable"

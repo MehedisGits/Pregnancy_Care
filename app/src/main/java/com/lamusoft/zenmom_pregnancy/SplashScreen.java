@@ -1,5 +1,6 @@
 package com.lamusoft.zenmom_pregnancy;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,9 +16,15 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.airbnb.lottie.LottieAnimationView;
+
+/**
+ * @noinspection BusyWait
+ */
+@SuppressLint("CustomSplashScreen")
 public class SplashScreen extends AppCompatActivity {
 
-    LinearLayout progressLayout;
+    private LinearLayout progressLayout;
     private ProgressBar progressBar;
     private int progress;
 
@@ -30,12 +37,10 @@ public class SplashScreen extends AppCompatActivity {
         // Make the activity fullscreen
         setContentView(R.layout.activity_splash_screen);
 
+        LottieAnimationView lottieAnimationView = findViewById(R.id.splashLottie);
+        lottieAnimationView.playAnimation();
         //Ad initialize
-   /*     MobileAds.initialize(SplashScreen.this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });*/
+
 
         // Initialize views
         progressLayout = findViewById(R.id.progressLayout);
@@ -58,15 +63,13 @@ public class SplashScreen extends AppCompatActivity {
             // Start the main activity regardless of the Android version
             startMainActivity();
         }).start();
-
-
     }
 
     private void doWork() {
         for (progress = 20; progress <= 100; progress += 20) {
             try {
                 // Simulate work being done
-                Thread.sleep(500);
+                Thread.sleep(700);
                 // Update the progress bar on the UI thread
                 runOnUiThread(() -> updateProgressBar(progress)); // Post updates to the UI thread
             } catch (InterruptedException e) {
@@ -87,7 +90,7 @@ public class SplashScreen extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             // Finish the splash screen activity
             finish();
-        }, 00); // You can adjust the delay time as needed
+        }, 100); // You can adjust the delay time as needed
     }
     @Override
     protected void onDestroy() {

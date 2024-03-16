@@ -17,25 +17,25 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/_50sdp"
             android:background="@color/white">
 
-
-                <ImageView
-                    android:layout_width="@dimen/_32sdp"
-                    android:layout_height="@dimen/_32sdp"
-                    android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_launcher" />
-
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:contentDescription="@string/scrollViewDescription"
+                android:src="@mipmap/ic_launcher" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="38dp"
                 android:gravity="center_vertical"
                 android:text="@string/heading"
-                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-                android:textColor="#00AE63" />
+                android:textColor="#43A047"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold" />
         </androidx.appcompat.widget.Toolbar>
 
         <View
@@ -48,11 +48,13 @@
     </LinearLayout>
 
     <include
-        android:id="@+id/tool"
+        android:id="@+id/home"
         layout="@layout/fragment_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/toolLay"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

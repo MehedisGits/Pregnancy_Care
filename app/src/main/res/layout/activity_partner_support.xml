@@ -38,7 +38,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_160sdp"
                         android:scaleType="centerCrop"
-                        />
+                        tools:ignore="ContentDescription" />
 
 
                     <TextView
@@ -116,7 +116,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/textbgcircle"
+                        android:background="@drawable/bg_circle"
                         android:orientation="vertical">
 
                         <TextView
@@ -154,7 +154,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="6dp"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
                     <TextView
@@ -186,7 +186,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="6dp"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
                     <TextView
@@ -218,7 +218,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="6dp"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
                     <TextView
@@ -251,7 +251,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="6dp"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
                     <TextView
@@ -283,7 +283,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="6dp"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
                     <TextView
@@ -315,7 +315,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="6dp"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
                     <TextView
@@ -347,7 +347,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="6dp"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
                     <TextView
@@ -379,7 +379,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="6dp"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
                     <TextView
@@ -411,7 +411,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="6dp"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
                     <TextView
@@ -443,7 +443,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="6dp"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
                     <TextView
@@ -475,7 +475,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="6dp"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
                     <TextView
@@ -507,7 +507,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="6dp"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
                     <TextView

@@ -286,7 +286,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:animateLayoutChanges="true"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical"
                     android:padding="4dp"
                     tools:animateLayoutChanges="true">
@@ -455,7 +455,8 @@
                         android:layout_width="48dp"
                         android:layout_height="32dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/baseline_arrow_drop_down_24" />
+                        android:src="@drawable/baseline_arrow_drop_down_24"
+                        tools:ignore="ContentDescription" />
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>

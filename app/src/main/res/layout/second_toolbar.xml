@@ -21,11 +21,12 @@
 
             <ImageView
                 android:id="@+id/backBtn"
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_20sdp"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
                 android:layout_gravity="center"
                 android:layout_margin="8dp"
                 android:layout_marginStart="8dp"
+                android:contentDescription="@string/offline_dialog_image_description"
                 android:src="@drawable/baseline_arrow_back_ios_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -39,8 +40,9 @@
                 android:gravity="center|center_horizontal"
                 android:maxLines="1"
                 android:text="@string/app_name"
-                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
                 android:textColor="@android:color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -60,9 +62,10 @@
 
                 <ImageView
                     android:id="@+id/disclaimerBtn"
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
                     android:layout_gravity="center"
+                    android:contentDescription="@string/offline_dialog_image_description"
                     android:src="@drawable/about" />
             </LinearLayout>
 

@@ -34,10 +34,12 @@
                     android:id="@+id/salt"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?selectableItemBackground"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UnusedAttribute">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/_42sdp"
@@ -51,7 +53,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
-                            android:src="@drawable/salt_pregnancy" />
+                            android:src="@drawable/salt_pregnancy"
+                            tools:ignore="ContentDescription" />
                     </androidx.cardview.widget.CardView>
 
                     <LinearLayout
@@ -91,10 +94,12 @@
                     android:id="@+id/sugar"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?selectableItemBackground"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UnusedAttribute">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/_42sdp"
@@ -108,7 +113,8 @@
                             android:layout_width="33dp"
                             android:layout_height="45dp"
                             android:layout_margin="4dp"
-                            android:src="@drawable/sugar_pregnancy" />
+                            android:src="@drawable/sugar_pregnancy"
+                            tools:ignore="ContentDescription" />
                     </androidx.cardview.widget.CardView>
 
                     <LinearLayout
@@ -149,10 +155,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
 
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?selectableItemBackground"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UnusedAttribute">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/_42sdp"
@@ -166,7 +174,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
-                            android:src="@drawable/vinegar" />
+                            android:src="@drawable/vinegar"
+                            tools:ignore="ContentDescription" />
                     </androidx.cardview.widget.CardView>
 
                     <LinearLayout
@@ -206,10 +215,12 @@
                     android:id="@+id/shampoo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?selectableItemBackground"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UnusedAttribute">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/_42sdp"
@@ -223,7 +234,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
-                            android:src="@drawable/shampoo" />
+                            android:src="@drawable/shampoo"
+                            tools:ignore="ContentDescription" />
                     </androidx.cardview.widget.CardView>
 
                     <LinearLayout
@@ -257,11 +269,12 @@
                     android:id="@+id/wheat"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?selectableItemBackground"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UnusedAttribute">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/_42sdp"
@@ -275,7 +288,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
-                            android:src="@drawable/wheat" />
+                            android:src="@drawable/wheat"
+                            tools:ignore="ContentDescription" />
                     </androidx.cardview.widget.CardView>
 
                     <LinearLayout
@@ -316,10 +330,12 @@
                     android:id="@+id/soda"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/textbgcircle"
+                    android:background="@drawable/bg_circle"
                     android:clickable="true"
+                    android:focusable="true"
                     android:foreground="?selectableItemBackground"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    tools:ignore="UnusedAttribute">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="@dimen/_42sdp"
@@ -333,7 +349,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
-                            android:src="@drawable/soda" />
+                            android:src="@drawable/soda"
+                            tools:ignore="ContentDescription" />
                     </androidx.cardview.widget.CardView>
 
                     <LinearLayout

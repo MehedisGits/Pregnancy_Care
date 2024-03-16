@@ -19,10 +19,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <include
-            layout="@layout/lottie"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/splashLottie"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="@dimen/_200sdp"
+            android:background="@android:color/transparent"
+            app:lottie_rawRes="@raw/pregnant" />
 
 
         <TextView
@@ -31,11 +33,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="@string/wellcome"
+            android:textColor="@color/black"
             android:textSize="@dimen/_14ssp"
             app:layout_constraintTop_toBottomOf="@+id/lottiAnim" />
     </LinearLayout>
@@ -56,7 +58,6 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/_16sdp"
             android:orientation="vertical">
-
 
         </LinearLayout>
 

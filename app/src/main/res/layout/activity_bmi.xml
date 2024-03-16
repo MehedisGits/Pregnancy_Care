@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_180sdp"
                 android:layout_margin="10dp"
-                android:background="@drawable/textbgcircle"
+                android:background="@drawable/bg_circle"
                 android:orientation="vertical">
 
                 <com.airbnb.lottie.LottieAnimationView

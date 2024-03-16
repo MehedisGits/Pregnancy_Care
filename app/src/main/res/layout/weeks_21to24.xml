@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg"
     android:orientation="vertical"
     tools:context=".Weeks21to24">
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="SpeakableTextPresentCheck">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -25,7 +19,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="@drawable/textbgcircle"
+                android:background="@drawable/bg_circle"
                 android:orientation="vertical">
 
                 <TextView
@@ -55,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/textbgcircle"
+                android:background="@drawable/bg_circle"
                 android:orientation="vertical"
                 android:padding="4dp">
 
@@ -172,5 +166,4 @@
                 android:text="@string/w21D"
                 android:textColor="@color/black" />
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+</ScrollView>

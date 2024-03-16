@@ -16,6 +16,9 @@ import com.squareup.picasso.Picasso;
 
 public class CommonComplaints extends AppCompatActivity {
 
+    /**
+     * @noinspection deprecation
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,26 +27,20 @@ public class CommonComplaints extends AppCompatActivity {
 
         TextView seeMore, heading;
         seeMore = findViewById(R.id.seeMoreInCC);
-        seeMore.setText("Show More");
+
+        String h = "Show More";
+        seeMore.setText(h);
 
         heading = findViewById(R.id.toolHeading);
-        heading.setText("Common Pregnancy Discomforts");
+
+        String h1 = "Common Discomforts";
+        heading.setText(h1);
         LinearLayout layout = findViewById(R.id.layout);
         ImageView disc = findViewById(R.id.disclaimerBtn);
-        disc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopUp.createPopUp(CommonComplaints.this, layout);
-            }
-        });
+        disc.setOnClickListener(v -> PopUp.createPopUp(CommonComplaints.this, layout));
 
         ImageView back = findViewById(R.id.backBtn);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+        back.setOnClickListener(v -> onBackPressed());
 
         String url = "https://github.com/RI-Mehedi/ZenMom-Image/blob/main/discomfort.jpg?raw=true";
         ImageView imageV = findViewById(R.id.imageV);
@@ -61,19 +58,20 @@ public class CommonComplaints extends AppCompatActivity {
 
         infoLay = findViewById(R.id.dataSourceInCC); //Parent
         infoLay.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
-        dropdown.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int vb = (moreInfo.getVisibility() == View.GONE) ? View.VISIBLE : View.GONE;
-                moreInfo.setVisibility(vb);
-                if (vb == View.GONE) {
-                    seeMore.setText("Show More");
-                    dropdown.setImageResource(R.drawable.baseline_arrow_drop_down_24);
-                }
-                if (vb == View.VISIBLE) {
-                    seeMore.setText("Show Less");
-                    dropdown.setImageResource(R.drawable.baseline_arrow_drop_up_24);
-                }
+        dropdown.setOnClickListener(v -> {
+            int vb = (moreInfo.getVisibility() == View.GONE) ? View.VISIBLE : View.GONE;
+            moreInfo.setVisibility(vb);
+            if (vb == View.GONE) {
+
+                String showMore = "Show More";
+                seeMore.setText(showMore);
+                dropdown.setImageResource(R.drawable.baseline_arrow_drop_down_24);
+            }
+            if (vb == View.VISIBLE) {
+
+                String showLess = "Show Less";
+                seeMore.setText(showLess);
+                dropdown.setImageResource(R.drawable.baseline_arrow_drop_up_24);
             }
         });
     }

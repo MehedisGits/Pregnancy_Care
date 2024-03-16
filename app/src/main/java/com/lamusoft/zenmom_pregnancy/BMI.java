@@ -23,21 +23,16 @@ public class BMI extends AppCompatActivity {
         lottieAnimationView.setRepeatCount(5);
         lottieAnimationView.playAnimation();
 
-        ImageView backBtn, discBtn;
+        ImageView backBtn;
         backBtn =findViewById(R.id.backBtn);
-        backBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-        discBtn =findViewById(R.id.disclaimerBtn);
+        //noinspection deprecation
+        backBtn.setOnClickListener(v -> onBackPressed());
+        ImageView discBtn = findViewById(R.id.disclaimerBtn);
         discBtn.setVisibility(View.GONE);
-        TextView heading = findViewById(R.id.toolHeading);
-        heading.setText("BMI Calculator");
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
+        TextView heading;
+        heading = findViewById(R.id.toolHeading);
+
+        String h = "Announcement";
+        heading.setText(h);
     }
 }

@@ -28,15 +28,15 @@
                     android:id="@+id/vagetableImage"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_160sdp"
-                    android:scaleType="centerCrop"
-                     />
+                    android:contentDescription="@string/offline_dialog_image_description"
+                    android:scaleType="centerCrop" />
             </androidx.cardview.widget.CardView>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@drawable/textbgcircle"
+                android:background="@drawable/bg_circle"
                 android:padding="8dp"
                 android:text="@string/notes"
                 android:textColor="@color/textColor"

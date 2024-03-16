@@ -13,18 +13,20 @@
         android:contentDescription="@string/aboutUs">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:orientation="vertical"
             >
+
             <TextView
+
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:autoLink="email"
                 android:text="@string/aboutUs"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_14ssp"
-                />
+                android:textSize="@dimen/_14ssp" />
         </LinearLayout>
     </ScrollView>
 
