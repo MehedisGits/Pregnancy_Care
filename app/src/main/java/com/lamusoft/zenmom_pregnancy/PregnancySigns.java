@@ -2,7 +2,6 @@ package com.lamusoft.zenmom_pregnancy;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -10,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
+
 public class PregnancySigns extends AppCompatActivity {
 
     private CardView missedPeriod, morningSickness, breastChanges, frequentUrination, fatigue, increasedAppetite, moodSwing, changesSkin, weightGain, movement, swelling;
@@ -23,15 +23,11 @@ public class PregnancySigns extends AppCompatActivity {
         initializeViews();
         setStatusBarAndHeading();
 
+
         ImageView disc = findViewById(R.id.disclaimerBtn);
 
         LinearLayout layout = findViewById(R.id.layout);
-        disc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopUp.createPopUp(getApplicationContext(), layout);
-            }
-        });
+        disc.setOnClickListener(v -> PopUp.createPopUp(getApplicationContext(), layout));
 
         setClickListeners(missedPeriod, R.string.missedPeriods, R.string.missedPC);
         setClickListeners(morningSickness, R.string.morningSickness, R.string.morningC);
@@ -58,10 +54,15 @@ public class PregnancySigns extends AppCompatActivity {
         movement = findViewById(R.id.movement);
         swelling = findViewById(R.id.swelling);
     }
+
+    /**
+     * @noinspection deprecation
+     */
     private void setStatusBarAndHeading() {
         ImageView backBtn = findViewById(R.id.backBtn);
         TextView heading = findViewById(R.id.toolHeading);
-        heading.setText("Signs & Symptoms");
+        String signsAndSymptoms = "Signs & Symptoms";
+        heading.setText(signsAndSymptoms);
 
         backBtn.setOnClickListener(v -> onBackPressed());
     }

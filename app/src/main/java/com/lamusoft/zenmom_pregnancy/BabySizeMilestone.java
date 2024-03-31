@@ -16,6 +16,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
+/**
+ * @noinspection ALL
+ */
 public class BabySizeMilestone extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager pager;
@@ -34,6 +37,7 @@ public class BabySizeMilestone extends AppCompatActivity {
         ImageView disc;
         disc = findViewById(R.id.disclaimerBtn);
         disc.setImageResource(R.drawable.baseline_share_24);
+
         disc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,11 +58,94 @@ public class BabySizeMilestone extends AppCompatActivity {
         pager.setAdapter(sizeAdapter);
         tabLayout.setupWithViewPager(pager);
 
+        // Get the week number from wherever it comes
+        int weekNumber = getIntent().getIntExtra("weekNumber", 0);
+
+        // Set the default tab index based on the week number
+        int defaultTabIndex = getDefaultTabIndex(weekNumber);
+        pager.setCurrentItem(defaultTabIndex);
+
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    private int getDefaultTabIndex(int weekNumber) {
+        if (weekNumber >= 1 && weekNumber <= 3) {
+            return 0; // First tab
+        } else if (weekNumber == 4) {
+            return 1; // Second tab
+        } else if (weekNumber == 5) {
+            return 2;
+        } else if (weekNumber == 6) {
+            return 3;
+        } else if (weekNumber == 7) {
+            return 4;
+        } else if (weekNumber == 8) {
+            return 5;
+        } else if (weekNumber == 9) {
+            return 6;
+        } else if (weekNumber == 10) {
+            return 7;
+        } else if (weekNumber == 11) {
+            return 8;
+        } else if (weekNumber == 12) {
+            return 9;
+        } else if (weekNumber == 13) {
+            return 10;
+        } else if (weekNumber == 14) {
+            return 11;
+        } else if (weekNumber == 15) {
+            return 12;
+        } else if (weekNumber == 16) {
+            return 13;
+        } else if (weekNumber == 17) {
+            return 14;
+        } else if (weekNumber == 18) {
+            return 15;
+        } else if (weekNumber == 19) {
+            return 16;
+        } else if (weekNumber == 20) {
+            return 17;
+        } else if (weekNumber == 21) {
+            return 18;
+        } else if (weekNumber == 22) {
+            return 19;
+        } else if (weekNumber == 23) {
+            return 20;
+        } else if (weekNumber == 24) {
+            return 21;
+        } else if (weekNumber == 25) {
+            return 22;
+        } else if (weekNumber == 26) {
+            return 23;
+        } else if (weekNumber == 27) {
+            return 24;
+        } else if (weekNumber == 28) {
+            return 25;
+        } else if (weekNumber == 29) {
+            return 26;
+        } else if (weekNumber == 30) {
+            return 27;
+        } else if (weekNumber == 31) {
+            return 28;
+        } else if (weekNumber == 32) {
+            return 29;
+        } else if (weekNumber == 33) {
+            return 30;
+        } else if (weekNumber == 34) {
+            return 31;
+        } else if (weekNumber == 35) {
+            return 32;
+        } else if (weekNumber == 36) {
+            return 33;
+        } else if (weekNumber == 37) {
+            return 34;
+        } else if (weekNumber == 38) {
+            return 35;
+        } else if (weekNumber == 39) {
+            return 36;
+        } else if (weekNumber == 40) {
+            return 37;
+        }
+        return 0;
     }
 
     public class SizeAdapter extends FragmentPagerAdapter {

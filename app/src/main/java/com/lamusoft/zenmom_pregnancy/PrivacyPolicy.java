@@ -10,6 +10,9 @@ import android.widget.ProgressBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+/**
+ * @noinspection deprecation, deprecation
+ */
 public class PrivacyPolicy extends AppCompatActivity {
 
     private WebView webView;
@@ -53,9 +56,5 @@ public class PrivacyPolicy extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
     }
 }

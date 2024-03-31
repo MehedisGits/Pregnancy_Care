@@ -8,9 +8,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.NetworkPolicy;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
+
 
 public class SexualHealth extends AppCompatActivity {
 
@@ -24,11 +23,15 @@ public class SexualHealth extends AppCompatActivity {
 
         // Set the heading text
         TextView heading = findViewById(R.id.toolHeading);
-        heading.setText("Sexual Health");
+        String hTxt = "Sexual Health";
+        heading.setText(hTxt);
 
         // Set up the back button
         ImageView back = findViewById(R.id.backBtn);
         back.setOnClickListener(new View.OnClickListener() {
+            /**
+             * @noinspection deprecation
+             */
             @Override
             public void onClick(View v) {
                 onBackPressed();
@@ -41,18 +44,15 @@ public class SexualHealth extends AppCompatActivity {
 
         // Load the image using Picasso
         String url = "https://github.com/RI-Mehedi/ZenMom-Image/blob/main/sexual_health.jpg?raw=true";
+
         ImageView imageV = findViewById(R.id.imageV);
-        Picasso.get().load(url)
-                .resize(480, 360)
-                .placeholder(R.drawable.placeholder)
-                .error(R.drawable.internet_error)
-                .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
-                .networkPolicy(NetworkPolicy.NO_CACHE)
-                .into(imageV);
+        if (imageV != null) {
+            Glide.with(this)
+                    .load(url)
+                    .placeholder(R.drawable.placeholder)
+                    .error(R.drawable.internet_error)
+                    .into(imageV);
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
     }
 }

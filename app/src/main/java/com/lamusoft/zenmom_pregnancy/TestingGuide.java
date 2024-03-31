@@ -18,10 +18,14 @@ public class TestingGuide extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.white));
 
         TextView heading = findViewById(R.id.toolHeading);
-        heading.setText("Test Kit Guide");
+        String hTxt = "Test Kit Guide";
+        heading.setText(hTxt);
 
         ImageView backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * @noinspection deprecation
+             */
             @Override
             public void onClick(View v) {
                 onBackPressed();
@@ -32,11 +36,6 @@ public class TestingGuide extends AppCompatActivity {
 
         ImageView disc;
         disc = findViewById(R.id.disclaimerBtn);
-        disc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopUp.createPopUp(getApplicationContext(), layout);
-            }
-        });
+        disc.setOnClickListener(v -> PopUp.createPopUp(getApplicationContext(), layout));
     }
 }

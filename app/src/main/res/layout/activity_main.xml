@@ -1,60 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
+    android:background="@color/primary"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="VisualLintBounds">
 
-    <LinearLayout
+
+    <!--Toolbar-->
+    <androidx.cardview.widget.CardView
         android:id="@+id/toolLay"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:cardElevation="@dimen/_6sdp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_height="@dimen/_40sdp"
             android:background="@color/white">
 
-            <ImageView
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_margin="@dimen/_4sdp"
-                android:contentDescription="@string/scrollViewDescription"
-                android:src="@mipmap/ic_launcher" />
-
-            <TextView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="38dp"
-                android:gravity="center_vertical"
-                android:text="@string/heading"
-                android:textColor="#43A047"
-                android:textSize="@dimen/_16sdp"
-                android:textStyle="bold" />
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="@dimen/_38sdp"
+                    android:layout_height="@dimen/_38sdp"
+                    android:contentDescription="this is an imageView"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_home"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/unicode"
+                    android:gravity="center_vertical"
+                    android:text="@string/heading"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.appcompat.widget.Toolbar>
+    </androidx.cardview.widget.CardView>
 
-        <View
-            android:id="@+id/divider50"
-            android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="?android:attr/listDivider" />
-
-
-    </LinearLayout>
-
-    <include
-        android:id="@+id/home"
-        layout="@layout/fragment_home"
+    <!--Fragment-->
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolLay"
+        android:layout_above="@+id/navigationBar"
+        android:layout_below="@+id/toolLay" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationBar"
+        style="@style/Widget.Material3.BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary"
+        android:clickable="true"
+        android:elevation="@dimen/_20sdp"
+        android:fadingEdge="vertical"
+        android:fitsSystemWindows="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layerType="software"
+        android:longClickable="true"
+        app:itemActiveIndicatorStyle="@style/Widget.Material3.BottomNavigationView.ActiveIndicator"
+        app:itemIconSize="@dimen/_20sdp"
+        app:itemIconTint="@color/textColor"
+        app:itemTextAppearanceActive="@style/TextAppearance.Material3.LabelMedium"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:itemTextColor="@color/textColor"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_nav_menu"
+        tools:ignore="VisualLintBottomNav" />
 
 </RelativeLayout>

@@ -8,12 +8,14 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.NetworkPolicy;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
+
 
 public class PhysicalActivity extends AppCompatActivity {
 
+    /**
+     * @noinspection deprecation
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +24,8 @@ public class PhysicalActivity extends AppCompatActivity {
 
         // Set the heading text
         TextView toolHeading = findViewById(R.id.toolHeading);
-        toolHeading.setText("Physical Health");
+        String hTxt = "Physical Health";
+        toolHeading.setText(hTxt);
 
         // Set up the back button
         ImageView back = findViewById(R.id.backBtn);
@@ -36,12 +39,10 @@ public class PhysicalActivity extends AppCompatActivity {
         // Load and display the image using Picasso
         String url = "https://github.com/RI-Mehedi/ZenMom-Image/blob/main/physical_activity.jpg?raw=true";
         ImageView imageV = findViewById(R.id.imageV);
-        Picasso.get().load(url)
-                .resize(480, 360)
+        Glide.with(PhysicalActivity.this)
+                .load(url)
                 .placeholder(R.drawable.placeholder)
                 .error(R.drawable.internet_error)
-                .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
-                .networkPolicy(NetworkPolicy.NO_CACHE)
                 .into(imageV);
     }
 }

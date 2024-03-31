@@ -2,7 +2,6 @@ package com.lamusoft.zenmom_pregnancy;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -18,9 +17,6 @@ import androidx.core.content.ContextCompat;
 
 import com.airbnb.lottie.LottieAnimationView;
 
-/**
- * @noinspection BusyWait
- */
 @SuppressLint("CustomSplashScreen")
 public class SplashScreen extends AppCompatActivity {
 
@@ -39,37 +35,36 @@ public class SplashScreen extends AppCompatActivity {
 
         LottieAnimationView lottieAnimationView = findViewById(R.id.splashLottie);
         lottieAnimationView.playAnimation();
-        //Ad initialize
-
 
         // Initialize views
         progressLayout = findViewById(R.id.progressLayout);
 
         new Thread(() -> {
-            if (Build.VERSION.SDK_INT != Build.VERSION_CODES.LOLLIPOP) {
-                // Inflate the layout containing the ProgressBar
-                LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
-                View view = inflater.inflate(R.layout.splash_progress_res, progressLayout, false);
+            // Inflate the layout containing the ProgressBar
+            LayoutInflater inflater = LayoutInflater.from(getApplicationContext());
+            View view = inflater.inflate(R.layout.splash_progress_res, progressLayout, false);
 
-                // Add the inflated layout to the progressLayout LinearLayout
-                progressLayout.addView(view);
+            // Add the inflated layout to the progressLayout LinearLayout
+            progressLayout.addView(view);
 
-                // Find the ProgressBar within the inflated layout
-                progressBar = view.findViewById(R.id.splashProgress);
+            // Find the ProgressBar within the inflated layout
+            progressBar = view.findViewById(R.id.splashProgress);
 
-                // Perform background work
-                doWork();
-            }
+            // Perform background work
+            doWork();
             // Start the main activity regardless of the Android version
             startMainActivity();
         }).start();
-    }
+    } //OnCreate Method END =================
 
+    /**
+     * @noinspection BusyWait
+     */
     private void doWork() {
         for (progress = 20; progress <= 100; progress += 20) {
             try {
                 // Simulate work being done
-                Thread.sleep(700);
+                Thread.sleep(200);
                 // Update the progress bar on the UI thread
                 runOnUiThread(() -> updateProgressBar(progress)); // Post updates to the UI thread
             } catch (InterruptedException e) {
@@ -90,10 +85,6 @@ public class SplashScreen extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             // Finish the splash screen activity
             finish();
-        }, 100); // You can adjust the delay time as needed
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
+        }, 0); // You can adjust the delay time as needed
     }
 }

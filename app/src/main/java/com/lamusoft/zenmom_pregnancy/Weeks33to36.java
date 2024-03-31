@@ -1,12 +1,14 @@
 package com.lamusoft.zenmom_pregnancy;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import androidx.fragment.app.Fragment;
+
+import com.bumptech.glide.Glide;
 
 public class Weeks33to36 extends Fragment {
 
@@ -14,6 +16,17 @@ public class Weeks33to36 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.weeks_33to36, container, false);
+        View v = inflater.inflate(R.layout.weeks_33to36, container, false);
+
+
+        ImageView gifV = v.findViewById(R.id.gifView);
+        String url = "https://raw.githubusercontent.com/rakibul-islam-mehedi/ZenMom-Image/main/fetus.gif";
+        Glide.with(this)
+                .load(url)
+                .placeholder(R.drawable.placeholder)
+                .error(R.drawable.internet_error)
+                .into(gifV);
+
+        return v;
     }
 }

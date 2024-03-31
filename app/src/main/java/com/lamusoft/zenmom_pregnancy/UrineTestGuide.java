@@ -22,15 +22,14 @@ public class UrineTestGuide extends AppCompatActivity {
         LinearLayout layout = findViewById(R.id.layout);
         ImageView disc;
         disc = findViewById(R.id.disclaimerBtn);
-        disc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopUp.createPopUp(getApplicationContext(), layout);
-            }
-        });
-        heading.setText("Urine Test");
+        disc.setOnClickListener(v -> PopUp.createPopUp(getApplicationContext(), layout));
+        String headingTxt = "Urine Test";
+        heading.setText(headingTxt);
         ImageView backBtn =  findViewById(R.id.backBtn);
         backBtn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * @noinspection deprecation
+             */
             @Override
             public void onClick(View v) {
                 onBackPressed();

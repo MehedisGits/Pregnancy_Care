@@ -10,9 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.NetworkPolicy;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 public class CommonComplaints extends AppCompatActivity {
 
@@ -44,15 +42,13 @@ public class CommonComplaints extends AppCompatActivity {
 
         String url = "https://github.com/RI-Mehedi/ZenMom-Image/blob/main/discomfort.jpg?raw=true";
         ImageView imageV = findViewById(R.id.imageV);
-        Picasso.get().load(url)
-                .resize(480, 360)
+        Glide.with(CommonComplaints.this)
+                .load(url)
                 .placeholder(R.drawable.placeholder)
                 .error(R.drawable.internet_error)
-                .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
-                .networkPolicy(NetworkPolicy.NO_CACHE)
                 .into(imageV);
 
-        ImageView dropdown = findViewById(R.id.dorpdownCComplaints);
+        ImageView dropdown = findViewById(R.id.dropDownCComplaints);
         LinearLayout moreInfo, infoLay;
         moreInfo = findViewById(R.id.moreSourceInCC);//Carry Gone Data
 

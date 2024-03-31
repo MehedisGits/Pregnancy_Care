@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
+    android:background="@color/primary"
     android:orientation="vertical"
     tools:context=".AboutUs">
     <include layout="@layout/second_toolbar"/>
@@ -14,19 +14,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="@dimen/_10sdp"
             android:orientation="vertical"
             >
 
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/_8sdp"
                 android:autoLink="email"
                 android:text="@string/aboutUs"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_14ssp" />
+                android:textSize="@dimen/_13ssp" />
         </LinearLayout>
     </ScrollView>
 

@@ -9,14 +9,14 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.NetworkPolicy;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
+
 
 public class NutritionContent extends AppCompatActivity {
 
     // Static variable to hold the title
     public static String title = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +24,7 @@ public class NutritionContent extends AppCompatActivity {
 
         // Retrieve the layout resource ID from the intent
         int layout = getIntent().getIntExtra("layout", 0);
+
 
         // Set the content view based on the layout resource ID
         setContentView(layout);
@@ -38,6 +39,9 @@ public class NutritionContent extends AppCompatActivity {
         // Back button click listener
         ImageView back = findViewById(R.id.backBtn);
         back.setOnClickListener(new View.OnClickListener() {
+            /**
+             * @noinspection deprecation
+             */
             @Override
             public void onClick(View v) {
                 onBackPressed();
@@ -47,19 +51,15 @@ public class NutritionContent extends AppCompatActivity {
         // Display the pop-up on disclaimer button click
         LinearLayout layoutV = findViewById(R.id.layout);
         ImageView disc = findViewById(R.id.disclaimerBtn);
-        disc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopUp.createPopUp(getApplicationContext(), layoutV);
-            }
-        });
+        disc.setOnClickListener(v -> PopUp.createPopUp(getApplicationContext(), layoutV));
     }
+
 
     private void ImageLoadingStart() {
 
-        ImageView vagetableImage = findViewById(R.id.vagetableImage);
+        ImageView vegetableImage = findViewById(R.id.vagetableImage);
         String url1 = "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/vegetables-fresh-bio-vegetable-basket_127032-1802.jpg?raw=true";
-        loadImage(vagetableImage, url1);
+        loadImage(vegetableImage, url1);
 
         ImageView snackIdeaImage = findViewById(R.id.snackIdeaImage);
         String url2 = "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/snack_ideas.jpg?raw=true";
@@ -69,22 +69,22 @@ public class NutritionContent extends AppCompatActivity {
         String url3 = "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/eating.jpg?raw=true";
         loadImage(eatingImage, url3);
 
-        ImageView foodstoavoidImage = findViewById(R.id.foodstoavoidImage);
+        ImageView foodsToAvoidImage = findViewById(R.id.foodstoavoidImage);
         String url4 = "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/foods_to_avoid.png?raw=true";
-        loadImage(foodstoavoidImage, url4);
+        loadImage(foodsToAvoidImage, url4);
 
         ImageView beautyImage = findViewById(R.id.beautyImage);
         String url5 = "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/beauty_care.jpg?raw=true";
         loadImage(beautyImage, url5);
     }
 
-    private  void loadImage(ImageView imageV, String url){
+    private  void loadImage(ImageView imageV, String url) {
 
-        if (imageV !=null ){
-            Picasso.get().load(url).resize(480, 360).placeholder(R.drawable.placeholder).error(R.drawable.internet_error).memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE).networkPolicy(NetworkPolicy.NO_CACHE)
+        Glide.with(NutritionContent.this)
+                .load(url)
+                .placeholder(R.drawable.placeholder)
+                .error(R.drawable.internet_error)
                     .into(imageV);
-        } else {
-        }
     }
 
 

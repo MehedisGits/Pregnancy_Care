@@ -13,6 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * @noinspection deprecation
+ */
 public class ComprehensiveGuideActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
@@ -41,7 +44,8 @@ public class ComprehensiveGuideActivity extends AppCompatActivity {
         shareBtn.setOnClickListener(v -> ShareIntent.shareApp(ComprehensiveGuideActivity.this));
 
         backBtn.setOnClickListener(v -> onBackPressed());
-        toolHeading.setText("Wellness Guide");
+        String hTxt = "Wellness Guide";
+        toolHeading.setText(hTxt);
     }
 
     private void setupRecyclerView() {
@@ -49,7 +53,7 @@ public class ComprehensiveGuideActivity extends AppCompatActivity {
 
         // Initialize data and set up the adapter
         ArrayList<HashMap<String, Object>> arrayList = initializeData();
-        MyAdapter adapter = new MyAdapter(ComprehensiveGuideActivity.this, arrayList);
+        MyAdapter adapter = new MyAdapter(arrayList);
         recyclerView.setAdapter(adapter);
 
         // Set click listener

@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 public class PregnancySignsContent extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +39,9 @@ public class PregnancySignsContent extends AppCompatActivity {
         // Set up back button
         ImageView backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * @noinspection deprecation
+             */
             @Override
             public void onClick(View v) {
                 onBackPressed();
@@ -52,8 +54,4 @@ public class PregnancySignsContent extends AppCompatActivity {
         share.setOnClickListener(v -> ShareIntent.shareApp(PregnancySignsContent.this));
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
 }

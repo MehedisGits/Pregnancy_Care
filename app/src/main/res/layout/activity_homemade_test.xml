@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
+    android:background="@drawable/card_bg"
     android:orientation="vertical"
     tools:context=".HomemadeTest">
 
@@ -24,11 +24,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_6sdp"
-                android:layout_marginTop="@dimen/_12sdp"
-                android:layout_marginEnd="@dimen/_6sdp"
-                android:layout_marginBottom="@dimen/_6sdp"
-                app:cardCornerRadius="@dimen/_6sdp" >
+                android:layout_margin="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_8sdp">
 
                 <LinearLayout
                     android:id="@+id/salt"
@@ -39,6 +36,7 @@
                     android:focusable="true"
                     android:foreground="?selectableItemBackground"
                     android:orientation="horizontal"
+                    android:padding="@dimen/_3sdp"
                     tools:ignore="UnusedAttribute">
 
                     <androidx.cardview.widget.CardView
@@ -63,20 +61,22 @@
                         android:orientation="vertical">
 
                         <TextView
+
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/salt"
                             android:textColor="@color/textColor"
-                            android:textSize="@dimen/_14ssp" />
+                            android:textSize="@dimen/_16ssp" />
                     </LinearLayout>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <View
-                android:id="@+id/divider59"
+                android:id="@+id/divider31"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="?android:attr/listDivider" />
@@ -84,11 +84,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_6sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:layout_marginEnd="@dimen/_6sdp"
-                android:layout_marginBottom="@dimen/_6sdp"
-                app:cardCornerRadius="@dimen/_6sdp" >
+                android:layout_margin="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_8sdp">
 
                 <LinearLayout
                     android:id="@+id/sugar"
@@ -99,6 +96,7 @@
                     android:focusable="true"
                     android:foreground="?selectableItemBackground"
                     android:orientation="horizontal"
+                    android:padding="@dimen/_3sdp"
                     tools:ignore="UnusedAttribute">
 
                     <androidx.cardview.widget.CardView
@@ -126,17 +124,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/sugar"
                             android:textColor="@color/textColor"
-                            android:textSize="@dimen/_14ssp" />
+                            android:textSize="@dimen/_16ssp" />
                     </LinearLayout>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <View
-                android:id="@+id/divider60"
+                android:id="@+id/divider43"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="?android:attr/listDivider" />
@@ -144,22 +143,20 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_6sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:layout_marginEnd="@dimen/_6sdp"
-                android:layout_marginBottom="@dimen/_6sdp"
-                app:cardCornerRadius="@dimen/_6sdp" >
+                android:layout_margin="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_8sdp">
 
                 <LinearLayout
                     android:id="@+id/vinegar"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
                     android:background="@drawable/bg_circle"
+
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?selectableItemBackground"
                     android:orientation="horizontal"
+                    android:padding="@dimen/_3sdp"
                     tools:ignore="UnusedAttribute">
 
                     <androidx.cardview.widget.CardView
@@ -187,17 +184,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/Vinegar"
                             android:textColor="@color/textColor"
-                            android:textSize="@dimen/_14ssp" />
+                            android:textSize="@dimen/_16ssp" />
                     </LinearLayout>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <View
-                android:id="@+id/divider66"
+                android:id="@+id/divider54"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="?android:attr/listDivider" />
@@ -205,11 +203,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_6sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:layout_marginEnd="@dimen/_6sdp"
-                android:layout_marginBottom="@dimen/_6sdp"
-                app:cardCornerRadius="@dimen/_6sdp" >
+                android:layout_margin="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_8sdp">
 
                 <LinearLayout
                     android:id="@+id/shampoo"
@@ -220,6 +215,7 @@
                     android:focusable="true"
                     android:foreground="?selectableItemBackground"
                     android:orientation="horizontal"
+                    android:padding="@dimen/_3sdp"
                     tools:ignore="UnusedAttribute">
 
                     <androidx.cardview.widget.CardView
@@ -247,23 +243,27 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/shampoo"
                             android:textColor="@color/textColor"
-                            android:textSize="@dimen/_14ssp" />
+                            android:textSize="@dimen/_16ssp" />
                     </LinearLayout>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <View
+                android:id="@+id/divider55"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_6sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:layout_marginEnd="@dimen/_6sdp"
-                android:layout_marginBottom="@dimen/_6sdp"
-                app:cardCornerRadius="@dimen/_6sdp" >
+                android:layout_margin="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_8sdp">
 
                 <LinearLayout
                     android:id="@+id/wheat"
@@ -274,6 +274,7 @@
                     android:focusable="true"
                     android:foreground="?selectableItemBackground"
                     android:orientation="horizontal"
+                    android:padding="@dimen/_3sdp"
                     tools:ignore="UnusedAttribute">
 
                     <androidx.cardview.widget.CardView
@@ -301,17 +302,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/wheat"
                             android:textColor="@color/textColor"
-                            android:textSize="@dimen/_14ssp" />
+                            android:textSize="@dimen/_16ssp" />
                     </LinearLayout>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <View
-                android:id="@+id/divider67"
+                android:id="@+id/divider56"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="?android:attr/listDivider" />
@@ -319,12 +321,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="@dimen/_6sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:layout_marginEnd="@dimen/_6sdp"
-                android:layout_marginBottom="@dimen/_12sdp"
-                app:cardCornerRadius="@dimen/_6sdp"
-                >
+                android:layout_margin="@dimen/_8sdp"
+                app:cardCornerRadius="@dimen/_8sdp">
 
                 <LinearLayout
                     android:id="@+id/soda"
@@ -335,6 +333,7 @@
                     android:focusable="true"
                     android:foreground="?selectableItemBackground"
                     android:orientation="horizontal"
+                    android:padding="@dimen/_3sdp"
                     tools:ignore="UnusedAttribute">
 
                     <androidx.cardview.widget.CardView
@@ -362,10 +361,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_margin="4dp"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/soda"
                             android:textColor="@color/textColor"
-                            android:textSize="@dimen/_14ssp" />
+                            android:textSize="@dimen/_16ssp" />
                     </LinearLayout>
 
                 </LinearLayout>

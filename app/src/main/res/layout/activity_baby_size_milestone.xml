@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/primary"
     android:orientation="vertical"
     tools:context=".BabySizeMilestone">
 
@@ -32,11 +32,45 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pagerIdBabySize"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/adLay"
         android:layout_below="@id/tabLayoutBabySize"
         android:contentDescription="@string/babySIzeTitle">
 
     </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/adLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="@drawable/card_bg"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_4sdp"
+            android:background="@drawable/bg_circle"
+            android:paddingStart="@dimen/_6sdp"
+            android:paddingEnd="@dimen/_6sdp"
+            android:text="@string/ad"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:visibility="visible" />
+
+        <com.google.android.ads.nativetemplates.TemplateView
+            android:id="@+id/my_template"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:gnt_template_type="@layout/gnt_small_template_view" />
+    </LinearLayout>
 
 
 </RelativeLayout>

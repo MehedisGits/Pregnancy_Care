@@ -5,10 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
+    android:background="@color/primary"
     android:orientation="vertical"
     tools:context=".PregnancySigns">
+
     <include layout="@layout/second_toolbar"/>
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,20 +21,21 @@
             android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="@dimen/_2sdp">
 
 
             <TextView
                 android:id="@+id/textView64"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="12dp"
+                android:layout_margin="@dimen/_6sdp"
                 android:background="@drawable/bg_circle"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/_6sdp"
                 android:text="@string/earlySigns"
-                android:textColor="@color/headingColor"
-               android:textSize="@dimen/_12ssp"  />
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_14ssp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -43,29 +47,27 @@
                     android:id="@+id/missedPeriod"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_6sdp"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:layout_margin="@dimen/_6sdp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/primary"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="2dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp"
                         tools:ignore="UseCompoundDrawables">
 
                         <ImageView
-                            android:layout_width="@dimen/_36sdp"
-                            android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="@dimen/_6sdp"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_margin="@dimen/_4sdp"
                             android:contentDescription="@string/offline_dialog_image_description"
                             android:src="@drawable/missed_period" />
 
@@ -73,14 +75,13 @@
                             android:id="@+id/textView76"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginEnd="3dp"
-                            android:layout_marginBottom="3dp"
+                            android:layout_margin="@dimen/_2sdp"
                             android:layout_weight="1"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/missedPeriods"
-                             android:textColor="@color/textColor"
-                           android:textSize="@dimen/_12ssp"  />
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -88,43 +89,40 @@
                     android:id="@+id/morningSickness"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:layout_margin="@dimen/_6sdp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/primary"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
-                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp"
                         tools:ignore="UseCompoundDrawables">
 
                         <ImageView
-                           android:layout_width="@dimen/_36sdp"
-                            android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="@dimen/_6sdp"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_margin="@dimen/_4sdp"
                             android:contentDescription="@string/offline_dialog_image_description"
                             android:src="@drawable/morning_sickness" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginEnd="3dp"
-                            android:layout_marginBottom="3dp"
+                            android:layout_margin="@dimen/_2sdp"
                             android:layout_weight="1"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/morningSickness"
-                             android:textColor="@color/textColor"
-                            android:textSize="@dimen/_12ssp" />
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -139,43 +137,40 @@
                     android:id="@+id/breastChanges"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_6sdp"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:layout_margin="@dimen/_6sdp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/primary"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp"
                         tools:ignore="UseCompoundDrawables">
 
                         <ImageView
-                            android:layout_width="@dimen/_36sdp"
-                            android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="@dimen/_6sdp"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_margin="@dimen/_4sdp"
                             android:contentDescription="@string/offline_dialog_image_description"
                             android:src="@drawable/breast_changes" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginEnd="3dp"
-                            android:layout_marginBottom="3dp"
+                            android:layout_margin="@dimen/_2sdp"
                             android:layout_weight="1"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/breastChanges"
-                             android:textColor="@color/textColor"
-                           android:textSize="@dimen/_12ssp"  />
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -183,43 +178,40 @@
                     android:id="@+id/frequentUrination"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:layout_margin="@dimen/_6sdp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/primary"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp"
                         tools:ignore="UseCompoundDrawables">
 
                         <ImageView
-                            android:layout_width="@dimen/_36sdp"
-                            android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="@dimen/_6sdp"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_margin="@dimen/_4sdp"
                             android:src="@drawable/frequent_urination"
                             tools:ignore="ContentDescription" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginEnd="3dp"
-                            android:layout_marginBottom="3dp"
+                            android:layout_margin="@dimen/_2sdp"
                             android:layout_weight="1"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/uniration"
-                             android:textColor="@color/textColor"
-                           android:textSize="@dimen/_12ssp"  />
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -234,43 +226,40 @@
                     android:id="@+id/fatgue"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_6sdp"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:layout_margin="@dimen/_6sdp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/primary"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp"
                         tools:ignore="UseCompoundDrawables">
 
                         <ImageView
-                              android:layout_width="@dimen/_36sdp"
-                        android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="@dimen/_6sdp"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_margin="@dimen/_4sdp"
                             android:src="@drawable/fatigue"
                             tools:ignore="ContentDescription" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginEnd="3dp"
-                            android:layout_marginBottom="3dp"
+                            android:layout_margin="@dimen/_2sdp"
                             android:layout_weight="1"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/fatigue"
-                             android:textColor="@color/textColor"
-                           android:textSize="@dimen/_12ssp"  />
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -290,14 +279,14 @@
                 android:id="@+id/textView75"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_margin="12dp"
+                android:layout_margin="@dimen/_6sdp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_circle"
                 android:gravity="center"
-                android:padding="8dp"
+                android:padding="@dimen/_6sdp"
                 android:text="@string/laterSigns"
-                android:textColor="@color/headingColor"
-               android:textSize="@dimen/_12ssp"  />
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_14ssp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -308,43 +297,40 @@
                     android:id="@+id/increasedAppetitte"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_6sdp"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:layout_margin="@dimen/_6sdp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/primary"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp"
                         tools:ignore="UseCompoundDrawables">
 
                         <ImageView
-                              android:layout_width="@dimen/_36sdp"
-                        android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="@dimen/_6sdp"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_margin="@dimen/_4sdp"
                             android:src="@drawable/increased_appetite"
                             tools:ignore="ContentDescription" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginEnd="3dp"
-                            android:layout_marginBottom="3dp"
+                            android:layout_margin="@dimen/_2sdp"
                             android:layout_weight="1"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/appetite"
-                             android:textColor="@color/textColor"
-                           android:textSize="@dimen/_12ssp"  />
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -352,43 +338,40 @@
                     android:id="@+id/moodSwing"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:layout_margin="@dimen/_6sdp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/primary"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp"
                         tools:ignore="UseCompoundDrawables">
 
                         <ImageView
-                              android:layout_width="@dimen/_36sdp"
-                        android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="@dimen/_6sdp"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_margin="@dimen/_4sdp"
                             android:src="@drawable/mood_swing"
                             tools:ignore="ContentDescription" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginEnd="3dp"
-                            android:layout_marginBottom="3dp"
+                            android:layout_margin="@dimen/_2sdp"
                             android:layout_weight="1"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/mood_swing"
-                             android:textColor="@color/textColor"
-                           android:textSize="@dimen/_12ssp"  />
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -403,87 +386,81 @@
                     android:id="@+id/changesSkin"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_6sdp"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
-                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:layout_margin="@dimen/_6sdp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/primary"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp"
                         tools:ignore="UseCompoundDrawables">
 
                         <ImageView
-                              android:layout_width="@dimen/_36sdp"
-                        android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="@dimen/_6sdp"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_margin="@dimen/_4sdp"
                             android:src="@drawable/skin_changes"
                             tools:ignore="ContentDescription" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginEnd="3dp"
-                            android:layout_marginBottom="3dp"
+                            android:layout_margin="@dimen/_2sdp"
                             android:layout_weight="1"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/changesSkin"
-                             android:textColor="@color/textColor"
-                           android:textSize="@dimen/_12ssp"  />
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/weightGain"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_6sdp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/primary"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp"
                         tools:ignore="UseCompoundDrawables">
 
                         <ImageView
-                              android:layout_width="@dimen/_36sdp"
-                        android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="@dimen/_6sdp"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_margin="@dimen/_4sdp"
                             android:src="@drawable/weight_gain"
                             tools:ignore="ContentDescription" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginEnd="3dp"
-                            android:layout_marginBottom="3dp"
+                            android:layout_margin="@dimen/_2sdp"
                             android:layout_weight="1"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/weightGain"
-                             android:textColor="@color/textColor"
-                           android:textSize="@dimen/_12ssp"  />
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -498,43 +475,40 @@
                     android:id="@+id/movement"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_6sdp"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:layout_marginEnd="@dimen/_5sdp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_margin="@dimen/_6sdp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/primary"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp"
                         tools:ignore="UseCompoundDrawables">
 
                         <ImageView
-                              android:layout_width="@dimen/_36sdp"
-                        android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="@dimen/_6sdp"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_margin="@dimen/_4sdp"
                             android:src="@drawable/baby_movement"
                             tools:ignore="ContentDescription" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginEnd="3dp"
-                            android:layout_marginBottom="3dp"
+                            android:layout_margin="@dimen/_2sdp"
                             android:layout_weight="1"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/babyMovement"
-                             android:textColor="@color/textColor"
-                           android:textSize="@dimen/_12ssp"  />
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -542,43 +516,40 @@
                     android:id="@+id/swelling"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/_5sdp"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="20dp"
+                    android:layout_margin="@dimen/_6sdp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/primary"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:selectableItemBackground"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="@dimen/_2sdp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp"
                         tools:ignore="UseCompoundDrawables">
 
                         <ImageView
-                              android:layout_width="@dimen/_36sdp"
-                        android:layout_height="@dimen/_36sdp"
-                            android:layout_margin="@dimen/_6sdp"
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_margin="@dimen/_4sdp"
                             android:src="@drawable/swelling"
                             tools:ignore="ContentDescription" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginEnd="3dp"
-                            android:layout_marginBottom="3dp"
+                            android:layout_margin="@dimen/_2sdp"
                             android:layout_weight="1"
+                            android:fontFamily="@font/unicode"
                             android:gravity="center_vertical"
                             android:text="@string/Swelling"
-                             android:textColor="@color/textColor"
-                           android:textSize="@dimen/_12ssp"  />
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_14ssp" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 

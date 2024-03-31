@@ -11,12 +11,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.NetworkPolicy;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 public class PrenatalNutrition extends AppCompatActivity {
 
+    /**
+     * @noinspection deprecation
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +28,8 @@ public class PrenatalNutrition extends AppCompatActivity {
         // Toolbar
         ImageView backBTN = findViewById(R.id.backBtn);
         TextView toolHeading = findViewById(R.id.toolHeading);
-        toolHeading.setText("Prenatal Nutrition");
+        String hTxt = "Prenatal Nutrition";
+        toolHeading.setText(hTxt);
 
         backBTN.setOnClickListener(v -> onBackPressed());
 
@@ -43,38 +45,32 @@ public class PrenatalNutrition extends AppCompatActivity {
         // Initialization
         LinearLayout moreDataSource = findViewById(R.id.moreDataSource);
         CardView dropdownBtnPrenatal = findViewById(R.id.dropdownBtnAlco);
-        ImageView dropdownImagePrenatal = findViewById(R.id.dorpdownCComplaints);
+        ImageView dropdownImagePrenatal = findViewById(R.id.dropDownCComplaints);
         TextView seeMoreINPrenatal = findViewById(R.id.seeMoreINPrenatal);
 
         ImageView imageV = findViewById(R.id.imageV);
         String url = "https://github.com/RI-Mehedi/ZenMom-Image/blob/main/prenatal_nutrition" +
                 ".jpg?raw=true";
-        Picasso.get().load(url)
-                .resize(480, 360)
+        Glide.with(PrenatalNutrition.this)
+                .load(url)
                 .placeholder(R.drawable.placeholder)
                 .error(R.drawable.internet_error)
-                .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
-                .networkPolicy(NetworkPolicy.NO_CACHE)
                 .into(imageV);
 
         // Click Event for Expanding or Collapsing
-        seeMoreINPrenatal.setText("See More");
+        seeMoreINPrenatal.setText(R.string.see_more);
         dropdownBtnPrenatal.setOnClickListener(v -> {
             int visibility = (moreDataSource.getVisibility() == View.GONE) ? View.VISIBLE : View.GONE;
             moreDataSource.setVisibility(visibility);
 
             if (visibility == View.GONE) {
-                seeMoreINPrenatal.setText("See More");
+                seeMoreINPrenatal.setText(R.string.see_more);
                 dropdownImagePrenatal.setImageResource(R.drawable.baseline_arrow_drop_down_24);
             }
             if (visibility == View.VISIBLE) {
-                seeMoreINPrenatal.setText("See Less");
+                seeMoreINPrenatal.setText(R.string.see_less);
                 dropdownImagePrenatal.setImageResource(R.drawable.baseline_arrow_drop_up_24);
             }
         });
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
     }
 }

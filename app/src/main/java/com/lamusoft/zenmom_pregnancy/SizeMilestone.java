@@ -9,9 +9,7 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.NetworkPolicy;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 
 public class SizeMilestone extends Fragment {
 
@@ -39,12 +37,10 @@ public class SizeMilestone extends Fragment {
         TextView compareTV = v.findViewById(R.id.compareTV);
 
         if (imageView != null){
-            Picasso.get().load(url)
-                    .resize(360, 240)
+            Glide.with(this)
+                    .load(url)
                     .placeholder(R.drawable.placeholder)
                     .error(R.drawable.internet_error)
-                    .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
-                    .networkPolicy(NetworkPolicy.NO_CACHE)
                     .into(imageView);
 
         } if (length != null){

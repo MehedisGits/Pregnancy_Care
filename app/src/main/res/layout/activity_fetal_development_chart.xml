@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    android:orientation="vertical"
-    android:background="@color/bg"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:orientation="vertical"
     tools:context=".FetalDevelopmentChart">
-    <include layout="@layout/second_toolbar"
-        android:id="@+id/toolbar"/>
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/second_toolbar" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayoutFetal"
@@ -23,7 +25,7 @@
         android:elevation="4dp"
         android:focusable="auto"
         app:tabGravity="center"
-        app:tabIndicatorAnimationDuration="2000"
+        app:tabIndicatorAnimationDuration="1000"
         app:tabIndicatorColor="@color/textColor"
         app:tabInlineLabel="true"
         app:tabMode="scrollable"

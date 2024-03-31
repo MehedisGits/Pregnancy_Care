@@ -11,9 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 
-import com.squareup.picasso.MemoryPolicy;
-import com.squareup.picasso.NetworkPolicy;
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
+
 
 public class AlcoholAndSmoke extends AppCompatActivity {
 
@@ -27,13 +26,18 @@ public class AlcoholAndSmoke extends AppCompatActivity {
         ImageView backBtnALco;
         backBtnALco = findViewById(R.id.backBtn);
         TextView toolHeading = findViewById(R.id.toolHeading);
-        toolHeading.setText("Avoid drinks & smoke");
+
+        String heading = "Avoid drinks & smoke";
+        toolHeading.setText(heading);
 
         ImageView disc = findViewById(R.id.disclaimerBtn);
         disc.setOnClickListener(v -> PopUp.createPopUp(AlcoholAndSmoke.this, findViewById(R.id.layout)));
 
         backBtnALco.isClickable();
         backBtnALco.setOnClickListener(new View.OnClickListener() {
+            /**
+             * @noinspection deprecation
+             */
             @Override
             public void onClick(View v) {
                 onBackPressed();
@@ -41,12 +45,10 @@ public class AlcoholAndSmoke extends AppCompatActivity {
         });
         String url = "https://github.com/RI-Mehedi/ZenMom-Image/blob/main/alcohol%20and%20smoke.png?raw=true";
         ImageView imageV = findViewById(R.id.imageV);
-        Picasso.get().load(url)
-                .resize(720, 240)
+        Glide.with(AlcoholAndSmoke.this)
+                .load(url)
                 .placeholder(R.drawable.placeholder)
                 .error(R.drawable.internet_error)
-                .memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
-                .networkPolicy(NetworkPolicy.NO_CACHE)
                 .into(imageV);
 
         //Expanding and Collapsing
@@ -55,29 +57,24 @@ public class AlcoholAndSmoke extends AppCompatActivity {
         dataSourceInAlco.getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
         moreSourceInALco = findViewById(R.id.moreSourceInCC);
         CardView expandBtnAlco = findViewById(R.id.dropdownBtnAlco);
-        ImageView dorpdownImageAlco = (ImageView) findViewById(R.id.dorpdownCComplaints);
+        ImageView dropDownImageV = findViewById(R.id.dropDownCComplaints);
         TextView seeMoreInAlcohol = findViewById(R.id.seeMoreInCC);
-        seeMoreInAlcohol.setText("See More");
-        expandBtnAlco.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int visibility = (moreSourceInALco.getVisibility()==View.GONE)?View.VISIBLE: View.GONE;
-                moreSourceInALco.setVisibility(visibility);
-                if (visibility==View.GONE){
-                    dorpdownImageAlco.setImageResource(R.drawable.baseline_arrow_drop_down_24);
-                    seeMoreInAlcohol.setText("See More");
-                }
-                if (visibility==View.VISIBLE){
-                    dorpdownImageAlco.setImageResource(R.drawable.baseline_arrow_drop_up_24);
-                    seeMoreInAlcohol.setText("See Less");
-                }
+
+        seeMoreInAlcohol.setText(R.string.see_more);
+        expandBtnAlco.setOnClickListener(v -> {
+            int visibility = (moreSourceInALco.getVisibility() == View.GONE) ? View.VISIBLE : View.GONE;
+            moreSourceInALco.setVisibility(visibility);
+            if (visibility == View.GONE) {
+                dropDownImageV.setImageResource(R.drawable.baseline_arrow_drop_down_24);
+                seeMoreInAlcohol.setText(R.string.see_more);
+            }
+            if (visibility == View.VISIBLE) {
+                dropDownImageV.setImageResource(R.drawable.baseline_arrow_drop_up_24);
+                seeMoreInAlcohol.setText(R.string.see_less);
             }
         });
 
 
     }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
+
 }

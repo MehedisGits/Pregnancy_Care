@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/bg"
+    android:background="@drawable/card_bg"
     android:clickable="true"
+    android:focusable="true"
     android:foreground="?attr/selectableItemBackground"
     android:orientation="vertical">
 
@@ -12,35 +14,26 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_6sdp"
-        android:layout_marginTop="@dimen/_6sdp"
-        android:layout_marginEnd="@dimen/_6sdp"
-        android:layout_marginBottom="@dimen/_6sdp"
-        app:cardCornerRadius="@dimen/_6sdp">
+        android:layout_margin="@dimen/_8sdp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:cardElevation="@dimen/_2sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:background="@drawable/textbgcircle"
+            android:background="@drawable/bg_circle"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="@dimen/_4sdp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="8dp"
-                android:backgroundTint="@color/bg"
-                app:cardCornerRadius="4dp"
-                app:cardElevation="6dp">
-
-                <ImageView
-                    android:id="@+id/guideImage"
-                    android:layout_width="@dimen/_40sdp"
-                    android:layout_height="@dimen/_40sdp"
-                    android:src="@drawable/diet_plan" />
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/guideImage"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_margin="@dimen/_6sdp"
+                android:src="@drawable/diet_plan"
+                tools:ignore="ContentDescription" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -59,10 +52,10 @@
                     android:layout_marginEnd="4dp"
                     android:layout_marginBottom="2dp"
                     android:ellipsize="end"
+                    android:fontFamily="@font/medium_trial"
                     android:gravity="center_vertical"
-                    android:text="Prenatal Nutrition"
                     android:textColor="@color/textColor"
-                    android:textSize="@dimen/_14ssp" />
+                    android:textSize="@dimen/_16ssp" />
 
             </RelativeLayout>
 

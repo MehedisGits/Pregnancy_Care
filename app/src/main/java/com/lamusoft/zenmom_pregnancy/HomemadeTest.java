@@ -9,8 +9,11 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+
+/**
+ * @noinspection deprecation
+ */
 public class HomemadeTest extends AppCompatActivity {
-    private LinearLayout salt, sugar, vinegar, shampoo, wheat, soda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +22,8 @@ public class HomemadeTest extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(HomemadeTest.this, R.color.white));
 
         TextView heading = findViewById(R.id.toolHeading);
-        heading.setText("Homemade Tests");
+        String headingText = "Homemade Tests";
+        heading.setText(headingText);
 
         ImageView backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(v -> onBackPressed());
@@ -32,23 +36,23 @@ public class HomemadeTest extends AppCompatActivity {
     }
 
     private void setClickListeners() {
-        salt = findViewById(R.id.salt);
+        LinearLayout salt = findViewById(R.id.salt);
         setHomemadeTestClickListener(salt, "Salt", R.string.salt, R.string.saltC);
 
-        sugar = findViewById(R.id.sugar);
+        LinearLayout sugar = findViewById(R.id.sugar);
         setHomemadeTestClickListener(sugar,"Sugar", R.string.sugar, R.string.sugarC);
 
-        vinegar = findViewById(R.id.vinegar);
+        LinearLayout vinegar = findViewById(R.id.vinegar);
         setHomemadeTestClickListener(vinegar,"Vinegar", R.string.Vinegar,
                 R.string.VinegarC);
 
-        shampoo = findViewById(R.id.shampoo);
+        LinearLayout shampoo = findViewById(R.id.shampoo);
         setHomemadeTestClickListener(shampoo,"Shampoo", R.string.shampoo, R.string.shampooC);
 
-        wheat = findViewById(R.id.wheat);
+        LinearLayout wheat = findViewById(R.id.wheat);
         setHomemadeTestClickListener(wheat,"Wheat and Barley", R.string.wheat, R.string.wheatC);
 
-        soda = findViewById(R.id.soda);
+        LinearLayout soda = findViewById(R.id.soda);
         setHomemadeTestClickListener(soda,"Baking Soda", R.string.soda, R.string.sodaC);
     }
 
@@ -57,14 +61,12 @@ public class HomemadeTest extends AppCompatActivity {
         layout.setOnClickListener(v -> {
             String title = getString(titleResId);
             String body = getString(bodyResId);
-            String titleHeadingText = titleH;
 
             Intent intent = new Intent(getApplicationContext(), PregnancySignsContent.class);
             intent.putExtra("title", title);
             intent.putExtra("body", body);
-            intent.putExtra("heading", titleHeadingText);
+            intent.putExtra("heading", titleH);
 
-            startActivity(intent);
         });
     }
 }

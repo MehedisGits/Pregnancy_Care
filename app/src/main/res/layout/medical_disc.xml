@@ -4,26 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary"
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_above="@+id/cardView2"
         android:layout_alignParentTop="true"
         android:layout_marginStart="@dimen/_8sdp"
         android:layout_marginTop="@dimen/_24sdp"
         android:layout_marginEnd="@dimen/_8sdp"
         android:layout_marginBottom="@dimen/_24sdp"
-        android:background="@drawable/popup_bg"
+        android:elevation="@dimen/_30sdp"
         android:orientation="vertical">
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:contentDescription="@string/disclaimer"
-            android:scrollIndicators="none"
             android:scrollbarStyle="outsideOverlay"
             app:layout_constraintBottom_toTopOf="@+id/cardView2">
 
@@ -47,7 +46,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:text="@string/disclaimer"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_12ssp" />
@@ -81,13 +80,14 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
                 android:clickable="true"
+                android:focusable="true"
                 android:foreground="?android:selectableItemBackground"
                 android:gravity="center"
                 android:maxLines="1"
                 android:padding="8dp"
                 android:text="@string/continueBtn"
                 android:textColor="@color/primary"
-                android:textSize="@dimen/_12ssp"
+                android:textSize="@dimen/_15ssp"
                 tools:ignore="TouchTargetSizeCheck" />
 
         </LinearLayout>

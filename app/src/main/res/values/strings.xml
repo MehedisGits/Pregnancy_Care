@@ -1,21 +1,23 @@
 <resources>
     <string name="app_name">ZenMom Pregnancy</string>
     <string name="heading">ZenMom</string>
-    <string name="wellcome">Welcome to <font size="18"><b>ZenMom</b></font>\nYour Trusted Companion on the Journey of Motherhood. Embrace the Experience!</string>
-    <string name="allRightReserved">©All rights reserved by LamuSoft Tech.</string>
+    <string name="welcome">Welcome to <font size="18"><b>ZenMom</b></font>\nYour Trusted Companion on the Journey of Motherhood. Embrace the Experience!</string>
+    <string name="allRightReserved">©LamuSoft Tech. 2024</string>
     <string name="shareMessage">🌟 Exciting News for Moms-to-Be! Welcome to ZenMom: Your Ultimate Pregnancy Companion! 🤰\n\nExplore a realm of realistic guidelines, baby growth milestones, and a supportive community, all tailored to make your pregnancy journey magical. 🌟👶 Download now to effortlessly embrace the joy of pregnancy!\n #ZenMom #PregnancyJoy #MomToBe 💖\n\nCurious to experience the magic? Dive in now! 🚀\n</string>
 
     <string name="about">About Us</string>
 
+    <string name="ad">Advertising</string>
+
     <string name="medicalDisclaimer"><b>Content Disclaimer:</b>\nThis app does not provide medical advice. Content is for informational purposes only and does not replace professional consultation. Always consult a qualified healthcare provider for medical guidance. If you have a medical emergency, call your doctor or emergency services. We do not endorse specific treatments or practitioners. Reliance on app content is at your own risk. Developers are not liable for decisions based on the app.
         \n\n</string>
     <string name="babyGrowthTitle">Baby Growth</string>
-    <string name="nutritionTtile">Diet and Nutrition</string>
-    <string name="partnerSupport">Partner Support</string>
+    <string name="nutritionTitle">Nutrition Tips</string>
+    <string name="partnerSupport">Partner Roles</string>
     <string name="babySIzeTitle">Baby Size</string>
     <string name="motherHealthTitle">Mother Health</string>
-    <string name="guideTitle">Enjoy a Sweet Pregnancy Journey</string>
-    <string name="testkitguide">Guide to Pregnancy Testing Kit</string>
+    <string name="guideTitle">Womb Wellness hub</string>
+    <string name="testKitGuide">Explore Testing Kit…</string>
     <string name="BMI">BMI Calculator</string>
     <string name="more">More…</string>
     <string name="coming">Dear Valued <b>ZenMom</b> Users,\n\n<b>Greetings!</b> We are thrilled to inform you that our development team is diligently working on introducing new and enhanced features to elevate your experience with the app. The upcoming changes are currently in the development phase and will be unveiled shortly.\nYour patience is highly appreciated as we strive to deliver a seamless and enriched app environment. Should you have any feedback or suggestions, we are more than eager to hear from you.\n\nThank you for your continued support.\n\nBest Regards,\n<b>ZenMom Developer Team.</b></string>
@@ -566,9 +568,9 @@ I hope these sources are helpful to you.\nWeb: https://nida.nih.gov/publications
     <string name="ur3">Pregnancy tests available at drugstores boast an impressive 99 out of 100 accuracy rate, comparable to tests administered at a doctor \'s office. These tests operate by scrutinizing urine for the presence of human chorionic gonadotropin (HCG), a hormone exclusively produced in pregnant individuals.</string>
     <string name="discOfUrine">Disclaimer:\nThis urine testing guideline is for general information purposes only and is not a substitute for professional medical advice. Consult with your healthcare provider for personalized guidance. The information may not cover all factors, and the creators do not endorse specific brands of pregnancy test kits. Reliance on this content is at the user \'s discretion, and the creators are not responsible for any consequences.</string>
 
-    <string name="lentgh">Length</string>
-    <string name="height">Height</string>
-    <string name="weight">Weight</string>
+    <string name="lentgh">Length: </string>
+    <string name="height">Height: </string>
+    <string name="weight">Weight: </string>
     <string name="compareText">Your baby is currently comparable in size to a</string>
 
     <string name="firstTrimesterDiet">Diet tips for First Trimester</string>
@@ -651,4 +653,19 @@ I hope these sources are helpful to you.\nWeb: https://nida.nih.gov/publications
     <string name="dataSourceText">Data Source for Increase information reliability and Know more depth:</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="scrollViewDescription">This is an Scroll View</string>
+    <string name="explore_baby_growth">Explore Baby Growth</string>
+    <string name="expected_delivery_date">Expected delivery date: 27–09–24</string>
+    <string name="highlight_w7">The embryo has a large forehead, and the eyes and ears continue to develop. The inner ears start to develop, but the outer ears on the sides of the head will not appear for a couple more weeks. The limb buds start to form cartilage, which will develop into the bones of the legs and arms.</string>
+    <string name="explore_more">Explore More</string>
+    <string name="popupInfoTitle">It is very important to track each milestone during your pregnancy.\nEnter information here (it\'s completely safe)</string>
+    <string name="diet">Diet</string>
+    <string name="tests">Tests</string>
+    <string name="home">Home</string>
+    <string name="Me">Me</string>
+    <string name="see_less">See Less</string>
+    <string name="see_more">See More</string>
+    <string name="week">Week</string>
+    <string name="prenatal_nutrition_guide_description">Prenatal nutrition Guide description</string>
+    <string name="done">Done</string>
+    <string name="days_to_go">Days to go</string>
 </resources>

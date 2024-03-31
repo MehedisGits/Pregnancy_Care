@@ -1,6 +1,5 @@
 package com.lamusoft.zenmom_pregnancy;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,15 +12,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * @noinspection ALL
+ */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-    private final Context context;
     private final ArrayList<HashMap<String, Object>> arrayList;
     private ClickListener clickListener;
 
-    public MyAdapter(Context context, ArrayList<HashMap<String, Object>> arrayList) {
+    public MyAdapter(ArrayList<HashMap<String, Object>> arrayList) {
         this.arrayList = arrayList;
-        this.context = context;
     }
 
     @NonNull

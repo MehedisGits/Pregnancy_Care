@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
+    android:background="@color/primary"
     android:orientation="vertical"
     tools:context=".PartnerSupport">
     <include layout="@layout/second_toolbar"/>
@@ -22,7 +22,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_6sdp"
+                android:layout_margin="@dimen/_8sdp"
                 android:layout_marginBottom="8dp"
                 app:cardCornerRadius="@dimen/_8sdp"
                 app:cardElevation="@dimen/_6sdp">
@@ -30,7 +30,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/white"
+                    android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
                     <ImageView
@@ -62,7 +62,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/_8sdp"
                 android:orientation="vertical">
 
                 <TextView
@@ -72,7 +72,7 @@
                     android:gravity="center"
                     android:text="@string/overV"
                      android:textColor="@color/textColor"
-                    android:textSize="@dimen/_14ssp" />
+                    android:textSize="@dimen/_16ssp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -81,16 +81,13 @@
                     android:gravity="center"
                     android:text="@string/overViewText"
                 android:textColor="@color/black"
-                    android:textSize="@dimen/_12ssp" />
+                    android:textSize="@dimen/_13ssp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="6dp"
-                android:layout_marginEnd="6dp"
-                android:layout_marginBottom="24dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -101,16 +98,13 @@
                     android:padding="6dp"
                     android:text="@string/roleOfPartner"
                      android:textColor="@color/textColor"
-                    android:textSize="@dimen/_14ssp" />
+                    android:textSize="@dimen/_16ssp" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="2dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginBottom="10dp"
-                    app:cardCornerRadius="8dp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="@dimen/_8sdp"
                     app:cardElevation="3dp">
 
                     <LinearLayout
@@ -143,7 +137,7 @@
                             android:gravity="center"
                             android:text="@string/giveUpSmokeP"
                         android:textColor="@color/black"
-                            android:textSize="@dimen/_12ssp" />
+                            android:textSize="@dimen/_13ssp" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -151,9 +145,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
@@ -177,15 +169,13 @@
                         android:layout_margin="4dp"
                         android:text="@string/role1"
                     android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_13ssp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
@@ -196,7 +186,7 @@
                         android:gravity="center"
                         android:text="@string/role2H"
                          android:textColor="@color/textColor"
-                        android:textSize="@dimen/_14ssp" />
+                        android:textSize="@dimen/_15ssp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -209,15 +199,13 @@
                         android:layout_margin="4dp"
                         android:text="@string/role2"
                     android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_13ssp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
@@ -228,7 +216,7 @@
                         android:gravity="center"
                         android:text="@string/role3H"
                          android:textColor="@color/textColor"
-                        android:textSize="@dimen/_14ssp" />
+                        android:textSize="@dimen/_15ssp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -241,16 +229,14 @@
                         android:layout_margin="4dp"
                         android:text="@string/role3"
                     android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_13ssp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
@@ -261,7 +247,7 @@
                         android:gravity="center"
                         android:text="@string/role4H"
                          android:textColor="@color/textColor"
-                        android:textSize="@dimen/_14ssp" />
+                        android:textSize="@dimen/_15ssp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -274,15 +260,13 @@
                         android:layout_margin="4dp"
                         android:text="@string/role4"
                     android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_13ssp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
@@ -293,7 +277,7 @@
                         android:gravity="center"
                         android:text="@string/role5H"
                          android:textColor="@color/textColor"
-                        android:textSize="@dimen/_14ssp" />
+                        android:textSize="@dimen/_15ssp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -306,15 +290,13 @@
                         android:layout_margin="4dp"
                         android:text="@string/role5"
                     android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_13ssp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
@@ -325,7 +307,7 @@
                         android:gravity="center"
                         android:text="@string/role6H"
                          android:textColor="@color/textColor"
-                        android:textSize="@dimen/_14ssp" />
+                        android:textSize="@dimen/_15ssp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -338,15 +320,13 @@
                         android:layout_margin="4dp"
                         android:text="@string/role6"
                     android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_13ssp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
@@ -357,7 +337,7 @@
                         android:gravity="center"
                         android:text="@string/role7H"
                          android:textColor="@color/textColor"
-                        android:textSize="@dimen/_14ssp" />
+                        android:textSize="@dimen/_15ssp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -370,15 +350,13 @@
                         android:layout_margin="4dp"
                         android:text="@string/role7"
                     android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_13ssp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
@@ -389,7 +367,7 @@
                         android:gravity="center"
                         android:text="@string/role8H"
                          android:textColor="@color/textColor"
-                        android:textSize="@dimen/_14ssp" />
+                        android:textSize="@dimen/_15ssp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -402,15 +380,13 @@
                         android:layout_margin="4dp"
                         android:text="@string/role8"
                     android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_13ssp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
@@ -421,7 +397,7 @@
                         android:gravity="center"
                         android:text="@string/role9H"
                          android:textColor="@color/textColor"
-                        android:textSize="@dimen/_14ssp" />
+                        android:textSize="@dimen/_15ssp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -434,15 +410,13 @@
                         android:layout_margin="4dp"
                         android:text="@string/role9"
                     android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_13ssp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
@@ -453,7 +427,7 @@
                         android:gravity="center"
                         android:text="@string/role10H"
                          android:textColor="@color/textColor"
-                        android:textSize="@dimen/_14ssp" />
+                        android:textSize="@dimen/_15ssp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -466,15 +440,13 @@
                         android:layout_margin="4dp"
                         android:text="@string/role10"
                     android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_13ssp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
@@ -485,7 +457,7 @@
                         android:gravity="center"
                         android:text="@string/role11H"
                          android:textColor="@color/textColor"
-                        android:textSize="@dimen/_14ssp" />
+                        android:textSize="@dimen/_15ssp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -498,15 +470,13 @@
                         android:layout_margin="4dp"
                         android:text="@string/role11"
                     android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_13ssp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="6dp"
+                    android:layout_margin="@dimen/_8sdp"
                     android:background="@drawable/bg_circle"
                     android:orientation="vertical">
 
@@ -517,7 +487,7 @@
                         android:gravity="center"
                         android:text="@string/role12H"
                          android:textColor="@color/textColor"
-                        android:textSize="@dimen/_14ssp" />
+                        android:textSize="@dimen/_15ssp" />
 
                     <View
                         android:layout_width="match_parent"
@@ -530,7 +500,7 @@
                         android:layout_margin="4dp"
                         android:text="@string/role12"
                     android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp" />
+                        android:textSize="@dimen/_13ssp" />
                 </LinearLayout>
 
                 <View

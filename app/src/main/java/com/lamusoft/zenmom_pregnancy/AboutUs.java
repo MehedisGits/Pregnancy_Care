@@ -19,6 +19,9 @@ public class AboutUs extends AppCompatActivity {
         ImageView backBtn, disc;
         backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * @noinspection deprecation
+             */
             @Override
             public void onClick(View v) {
                 onBackPressed();

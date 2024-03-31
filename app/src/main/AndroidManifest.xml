@@ -17,6 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/Theme.ZenMomPregnancy"
+        tools:replace="android:supportsRtl"
         tools:targetApi="31">
 
         <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
@@ -68,9 +69,6 @@
             android:exported="false" />
         <activity
             android:name=".NutritionContent"
-            android:exported="false" />
-        <activity
-            android:name=".NutritionPlan"
             android:exported="false" />
         <activity
             android:name=".BabySizeMilestone"

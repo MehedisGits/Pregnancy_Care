@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
+    android:background="@color/primary"
     android:orientation="vertical">
 
-    <include layout="@layout/second_toolbar" />
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/second_toolbar" />
+
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/Signs">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -22,33 +27,58 @@
                 android:id="@+id/signsTitle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bg_circle"
                 android:gravity="center"
+                android:padding="@dimen/_6sdp"
                 android:text="@string/missedPeriods"
                 android:textColor="@color/textColor"
                 android:textSize="@dimen/_14ssp"
-                android:textStyle="bold">
+                android:textStyle="bold" />
 
-            </TextView>
-
-            <View
-                android:id="@+id/divider31"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_margin="@dimen/_6sdp"
-                android:background="?android:attr/listDivider" />
 
             <TextView
                 android:id="@+id/signsText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_8sdp"
                 android:text="@string/morningC"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12ssp">
+                android:textSize="@dimen/_12ssp" />
 
+            <LinearLayout
+                android:id="@+id/adsTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/card_bg"
+                android:orientation="vertical"
+                android:visibility="gone">
 
-            </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:background="@drawable/bg_circle"
+                    android:paddingStart="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_6sdp"
+                    android:text="@string/ad"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    android:visibility="visible" />
+
+                <com.google.android.ads.nativetemplates.TemplateView
+                    android:id="@+id/my_template"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:gnt_template_type="@layout/gnt_small_template_view" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
 
 </LinearLayout>

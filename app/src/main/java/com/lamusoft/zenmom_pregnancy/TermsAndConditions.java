@@ -17,15 +17,14 @@ public class TermsAndConditions extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
 
         TextView heading = findViewById(R.id.toolHeading);
-        heading.setText("Terms of Use");
+        String hTxt = "Terms of use";
+        heading.setText(hTxt);
 
         ImageView backBtn , disc;
         backBtn = findViewById(R.id.backBtn);
-        backBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
+        backBtn.setOnClickListener(v -> {
+            //noinspection deprecation
+            onBackPressed();
         });
         disc = findViewById(R.id.disclaimerBtn);
         disc.setVisibility(View.GONE);
