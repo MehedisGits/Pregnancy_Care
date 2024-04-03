@@ -1,5 +1,6 @@
 package com.lamusoft.zenmom_pregnancy;
 
+import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,8 @@ public class PrivacyPolicy extends AppCompatActivity {
 
     private WebView webView;
     private  ProgressBar progressBar;
+
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +48,6 @@ public class PrivacyPolicy extends AppCompatActivity {
         String url = "https://sites.google.com/view/privacypolicyzenmom/%E0%A6%B9%E0%A6%AE";
         webView.loadUrl(url);
 
-        /*setStatusBar();*/
 
     }
     // Override onBackPressed to handle WebView navigation
