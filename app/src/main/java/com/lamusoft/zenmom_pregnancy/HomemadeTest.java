@@ -9,12 +9,11 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-
-/**
- * @noinspection deprecation
- */
 public class HomemadeTest extends AppCompatActivity {
 
+    /**
+     * @noinspection deprecation
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,26 +36,26 @@ public class HomemadeTest extends AppCompatActivity {
 
     private void setClickListeners() {
         LinearLayout salt = findViewById(R.id.salt);
-        setHomemadeTestClickListener(salt, "Salt", R.string.salt, R.string.saltC);
+        setOnClickListener(salt, "Salt", R.string.salt, R.string.saltC);
 
         LinearLayout sugar = findViewById(R.id.sugar);
-        setHomemadeTestClickListener(sugar,"Sugar", R.string.sugar, R.string.sugarC);
+        setOnClickListener(sugar, "Sugar", R.string.sugar, R.string.sugarC);
 
         LinearLayout vinegar = findViewById(R.id.vinegar);
-        setHomemadeTestClickListener(vinegar,"Vinegar", R.string.Vinegar,
+        setOnClickListener(vinegar, "Vinegar", R.string.Vinegar,
                 R.string.VinegarC);
 
         LinearLayout shampoo = findViewById(R.id.shampoo);
-        setHomemadeTestClickListener(shampoo,"Shampoo", R.string.shampoo, R.string.shampooC);
+        setOnClickListener(shampoo, "Shampoo", R.string.shampoo, R.string.shampooC);
 
         LinearLayout wheat = findViewById(R.id.wheat);
-        setHomemadeTestClickListener(wheat,"Wheat and Barley", R.string.wheat, R.string.wheatC);
+        setOnClickListener(wheat, "Wheat and Barley", R.string.wheat, R.string.wheatC);
 
         LinearLayout soda = findViewById(R.id.soda);
-        setHomemadeTestClickListener(soda,"Baking Soda", R.string.soda, R.string.sodaC);
+        setOnClickListener(soda, "Baking Soda", R.string.soda, R.string.sodaC);
     }
 
-    private void setHomemadeTestClickListener(LinearLayout layout, String titleH ,int titleResId, int bodyResId)
+    private void setOnClickListener(LinearLayout layout, String titleH, int titleResId, int bodyResId)
     {
         layout.setOnClickListener(v -> {
             String title = getString(titleResId);
@@ -67,6 +66,8 @@ public class HomemadeTest extends AppCompatActivity {
             intent.putExtra("body", body);
             intent.putExtra("heading", titleH);
 
+            // Start the activity
+            startActivity(intent);
         });
     }
 }

@@ -1,5 +1,6 @@
 package com.lamusoft.zenmom_pregnancy;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
@@ -14,7 +15,7 @@ public class PopUp {
     public static View createPopUp(Context context, View parent) {
         // Inflate the popup layout
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View popupView = inflater.inflate(R.layout.medical_disc, null);
+        @SuppressLint("InflateParams") View popupView = inflater.inflate(R.layout.medical_disc, null);
 
         // Create a PopupWindow with a smooth transition
         PopupWindow popupWindow = new PopupWindow(

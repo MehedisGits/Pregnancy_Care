@@ -13,5 +13,9 @@
         android:id="@+id/navTest"
         android:icon="@drawable/test"
         android:title="@string/tests" />
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/baseline_more_horiz_24"
+        android:title="@string/moreBtn" />
 
 </menu>

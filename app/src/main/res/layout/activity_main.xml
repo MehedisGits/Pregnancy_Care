@@ -85,7 +85,7 @@
         android:layerType="software"
         android:longClickable="true"
         app:itemActiveIndicatorStyle="@style/Widget.Material3.BottomNavigationView.ActiveIndicator"
-        app:itemIconSize="@dimen/_20sdp"
+        app:itemIconSize="24dp"
         app:itemIconTint="@color/textColor"
         app:itemTextAppearanceActive="@style/TextAppearance.Material3.LabelMedium"
         app:itemTextAppearanceActiveBoldEnabled="true"

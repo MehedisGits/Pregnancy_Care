@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary"
     android:orientation="vertical"
-    tools:context=".TermsAndConditions">
-    <include layout="@layout/second_toolbar"/>
+    tools:context=".Disclaimer">
+
+    <include layout="@layout/second_toolbar" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="@string/termsOfUse">
+        android:contentDescription="@string/disc">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical"
-            android:paddingBottom="16dp">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:autoLink="email"
-                android:text="@string/termsOfUse"
+                android:layout_margin="@dimen/_8sdp"
+                android:text="@string/disc"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_13ssp" />
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>

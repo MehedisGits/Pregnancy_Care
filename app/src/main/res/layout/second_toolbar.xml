@@ -61,8 +61,8 @@
 
                 <ImageView
                     android:id="@+id/disclaimerBtn"
-                    android:layout_width="@dimen/_24sdp"
-                    android:layout_height="@dimen/_24sdp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
                     android:layout_gravity="center"
                     android:contentDescription="@string/offline_dialog_image_description"
                     android:src="@drawable/about" />

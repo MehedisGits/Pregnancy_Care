@@ -1,7 +1,6 @@
 package com.lamusoft.zenmom_pregnancy;
 
 import android.annotation.SuppressLint;
-import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -26,13 +25,11 @@ import java.util.Locale;
 
 public class HomeFragment extends Fragment {
     public static int GET_WEEK_NUM;
-    private final String START_DATE_KEY = "start_date";
-    private ConstraintLayout motherHealthGuideSection, babySizeSection;
+    private ConstraintLayout motherHealthGuideSection, babySizeSection, trackerActivity;
     private ImageView partnerSupport;
     private LinearLayout babyGrowthSection;
     private Context context;
     private TextView remainingDaysTV, runningWeeksNumberTV, currentWeekDayTV, completedPercentageTv;
-    private SharedPreferences sharedPreferences;
     private Handler handler;
     private Runnable progressRunnable;
     private Calendar startDateCalendar;
@@ -43,7 +40,6 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-
 
         // Initialize UI elements
         context = getContext();
@@ -57,14 +53,19 @@ public class HomeFragment extends Fragment {
         currentWeekDayTV = view.findViewById(R.id.currentWeekDayTV);
         completedPercentageTv = view.findViewById(R.id.completedPercentageTv);
         pregnancyProgressbar = view.findViewById(R.id.pregnancyProgressBar);
+        trackerActivity = view.findViewById(R.id.trackerActivity);
 
         String PREF_FILE_KEY = "progress_pref";
-        sharedPreferences = context.getSharedPreferences(PREF_FILE_KEY, Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_FILE_KEY, Context.MODE_PRIVATE);
 
+        String START_DATE_KEY = "start_date";
         String startDateStr = sharedPreferences.getString(START_DATE_KEY, "");
 
         if (startDateStr.isEmpty()) {
-            showDatePickerDialog();
+            // Delay showing the popup until the fragment's view is created
+            // to avoid parent view being null
+            handler = new Handler();
+            handler.postDelayed(() -> trackerActivity.setVisibility(View.GONE), 100);
         } else {
             startDateCalendar = Calendar.getInstance();
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
@@ -82,29 +83,6 @@ public class HomeFragment extends Fragment {
 
         setClickListeners();
         return view;
-    }
-
-    //Show a Date Picker Dialog
-    private void showDatePickerDialog() {
-        Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH);
-        int dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
-
-        DatePickerDialog datePickerDialog = new DatePickerDialog(
-                context,
-                (view, year1, monthOfYear, dayOfMonth1) -> {
-                    String selectedDate = dayOfMonth1 + "/" + (monthOfYear + 1) + "/" + year1;
-                    saveStartDate(selectedDate);
-                    startDateCalendar = Calendar.getInstance();
-                    startDateCalendar.set(year1, monthOfYear, dayOfMonth1);
-                    startProgressTracker();
-                },
-                year,
-                month,
-                dayOfMonth
-        );
-        datePickerDialog.show();
     }
 
     //Start Tracking the Progress
@@ -142,13 +120,6 @@ public class HomeFragment extends Fragment {
         completedPercentageTv.setText(formattedPercentage);
 
         pregnancyProgressbar.setProgress((int) (280 - remainingDays));
-    }
-
-    //Start Saving Data Using SharedPref
-    private void saveStartDate(String startDate) {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(START_DATE_KEY, startDate);
-        editor.apply();
     }
 
     //Click Event Handle of All Section in Home Fragment

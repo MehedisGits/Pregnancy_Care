@@ -2,6 +2,7 @@ package com.lamusoft.zenmom_pregnancy;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -17,12 +18,16 @@ import androidx.core.content.ContextCompat;
 
 import com.airbnb.lottie.LottieAnimationView;
 
+/**
+ *
+ */
 @SuppressLint("CustomSplashScreen")
 public class SplashScreen extends AppCompatActivity {
 
     private LinearLayout progressLayout;
     private ProgressBar progressBar;
     private int progress;
+    private String startDate;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -36,6 +41,12 @@ public class SplashScreen extends AppCompatActivity {
         LottieAnimationView lottieAnimationView = findViewById(R.id.splashLottie);
         lottieAnimationView.playAnimation();
 
+        String PREF_FILE_KEY = "progress_pref";
+        SharedPreferences sharedPreferences = SplashScreen.this.getSharedPreferences(PREF_FILE_KEY, MODE_PRIVATE);
+
+        String START_DATE_KEY = "start_date";
+        startDate = sharedPreferences.getString(START_DATE_KEY, "");
+        
         // Initialize views
         progressLayout = findViewById(R.id.progressLayout);
 
@@ -64,7 +75,7 @@ public class SplashScreen extends AppCompatActivity {
         for (progress = 20; progress <= 100; progress += 20) {
             try {
                 // Simulate work being done
-                Thread.sleep(200);
+                Thread.sleep(500);
                 // Update the progress bar on the UI thread
                 runOnUiThread(() -> updateProgressBar(progress)); // Post updates to the UI thread
             } catch (InterruptedException e) {
@@ -81,8 +92,13 @@ public class SplashScreen extends AppCompatActivity {
     private void startMainActivity() {
         // Delay for a moment after the progress is complete
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            // Start the main activity
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
+            if (startDate.isEmpty()) {
+                startActivity(new Intent(SplashScreen.this, DatePickerActivity.class));
+            } else {
+                startActivity(new Intent(SplashScreen.this, MainActivity.class));
+            }
+
             // Finish the splash screen activity
             finish();
         }, 0); // You can adjust the delay time as needed

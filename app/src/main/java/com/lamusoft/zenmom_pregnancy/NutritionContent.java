@@ -11,7 +11,6 @@ import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
 
-
 public class NutritionContent extends AppCompatActivity {
 
     // Static variable to hold the title
@@ -24,7 +23,6 @@ public class NutritionContent extends AppCompatActivity {
 
         // Retrieve the layout resource ID from the intent
         int layout = getIntent().getIntExtra("layout", 0);
-
 
         // Set the content view based on the layout resource ID
         setContentView(layout);
@@ -54,39 +52,23 @@ public class NutritionContent extends AppCompatActivity {
         disc.setOnClickListener(v -> PopUp.createPopUp(getApplicationContext(), layoutV));
     }
 
-
     private void ImageLoadingStart() {
-
-        ImageView vegetableImage = findViewById(R.id.vagetableImage);
-        String url1 = "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/vegetables-fresh-bio-vegetable-basket_127032-1802.jpg?raw=true";
-        loadImage(vegetableImage, url1);
-
-        ImageView snackIdeaImage = findViewById(R.id.snackIdeaImage);
-        String url2 = "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/snack_ideas.jpg?raw=true";
-        loadImage(snackIdeaImage, url2);
-
-        ImageView eatingImage = findViewById(R.id.eatingImage);
-        String url3 = "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/eating.jpg?raw=true";
-        loadImage(eatingImage, url3);
-
-        ImageView foodsToAvoidImage = findViewById(R.id.foodstoavoidImage);
-        String url4 = "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/foods_to_avoid.png?raw=true";
-        loadImage(foodsToAvoidImage, url4);
-
-        ImageView beautyImage = findViewById(R.id.beautyImage);
-        String url5 = "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/beauty_care.jpg?raw=true";
-        loadImage(beautyImage, url5);
+        loadImage(findViewById(R.id.vagetableImage), "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/vegetables-fresh-bio-vegetable-basket_127032-1802.jpg?raw=true");
+        loadImage(findViewById(R.id.snackIdeaImage), "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/snack_ideas.jpg?raw=true");
+        loadImage(findViewById(R.id.eatingImage), "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/eating.jpg?raw=true");
+        loadImage(findViewById(R.id.foodstoavoidImage), "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/foods_to_avoid.png?raw=true");
+        loadImage(findViewById(R.id.beautyImage), "https://github.com/rakibul-islam-mehedi/ZenMom-Image/blob/main/beauty_care.jpg?raw=true");
     }
 
-    private  void loadImage(ImageView imageV, String url) {
-
-        Glide.with(NutritionContent.this)
-                .load(url)
-                .placeholder(R.drawable.placeholder)
-                .error(R.drawable.internet_error)
-                    .into(imageV);
+    private void loadImage(ImageView imageView, String url) {
+        if (imageView != null) {
+            Glide.with(this)
+                    .load(url)
+                    .placeholder(R.drawable.placeholder)
+                    .error(R.drawable.internet_error)
+                    .into(imageView);
+        }
     }
-
 
     @Override
     protected void onDestroy() {
