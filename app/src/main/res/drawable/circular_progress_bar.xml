@@ -4,15 +4,15 @@
     <item android:id="@+id/background">
         <shape
             android:shape="ring"
-            android:thickness="@dimen/_6sdp"
+            android:thickness="@dimen/_8sdp"
             android:useLevel="false">
-            <solid android:color="#7A42A646" />
+            <solid android:color="#4600FF0A" />
         </shape>
     </item>
     <item android:id="@+id/progress">
         <shape
             android:shape="ring"
-            android:thickness="@dimen/_6sdp"
+            android:thickness="@dimen/_8sdp"
             android:useLevel="true">
             <solid android:color="@color/primary" />
         </shape>

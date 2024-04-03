@@ -3,6 +3,7 @@ package com.lamusoft.zenmom_pregnancy;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -24,5 +25,8 @@ public class Disclaimer extends AppCompatActivity {
         backBtn.setOnClickListener(v -> onBackPressed());
         discBtn = findViewById(R.id.disclaimerBtn);
         discBtn.setVisibility(View.GONE);
+        TextView h = findViewById(R.id.toolHeading);
+        String hTxt = "Disclaimer";
+        h.setText(hTxt);
     }
 }
