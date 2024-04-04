@@ -24,7 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_200sdp"
             android:background="@android:color/transparent"
-            app:lottie_rawRes="@raw/pregnant" />
+            app:lottie_rawRes="@raw/pregnant"
+            tools:ignore="ImageContrastCheck" />
 
 
         <TextView
@@ -38,7 +39,7 @@
             android:gravity="center"
             android:text="@string/welcome"
             android:textColor="@color/black"
-            android:textSize="@dimen/_14ssp"
+            android:textSize="@dimen/_13ssp"
             app:layout_constraintTop_toBottomOf="@+id/lottiAnim" />
     </LinearLayout>
 

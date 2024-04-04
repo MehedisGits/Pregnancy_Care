@@ -9,121 +9,146 @@
     android:orientation="vertical"
     tools:context=".DatePickerActivity">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/welcomeLottie"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_100sdp"
-        android:layout_margin="@dimen/_12sdp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/welcome" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout5"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/radius_bg_white"
-        android:orientation="vertical"
-        android:padding="@dimen/_6sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeLottie">
+        tools:ignore="UselessParent">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_4sdp"
-            android:gravity="center"
-            android:text="@string/askForDateText"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_15ssp" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/howWeCalculateBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_6sdp"
-            android:gravity="center"
-            android:text="@string/howToCalculate"
-            android:textColor="@color/black" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_62sdp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/icon_home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/welcomeLottie"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/welcome"
+                tools:ignore="ImageContrastCheck" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/pickStartDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_10sdp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/radius_bg_white"
-        android:padding="@dimen/_8sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:helperText="DD/MM/YYYY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/dateEdText"
+            <LinearLayout
+                android:id="@+id/linearLayout5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clickable="true"
-                android:drawableEnd="@drawable/baseline_calendar_month_24"
-                android:focusable="false"
-                android:hint="@string/enter_a_date"
-                android:inputType="none"
-                tools:ignore="KeyboardInaccessibleWidget,TextContrastCheck" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/radius_bg_white"
+                android:orientation="vertical"
+                android:padding="@dimen/_6sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcomeLottie">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:gravity="center"
+                    android:text="@string/askForDateText"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15ssp" />
 
-    <TextView
-        android:id="@+id/privacyBtn"
-        android:layout_width="match_parent"
-        android:layout_height="19dp"
-        android:layout_marginTop="@dimen/_24sdp"
-        android:gravity="center"
-        android:text="@string/policyTxt"
-        android:textColor="#3F51B5"
-        app:layout_constraintBottom_toTopOf="@+id/getStartedBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:id="@+id/howWeCalculateBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:gravity="center"
+                    android:text="@string/howToCalculate"
+                    android:textColor="@color/black" />
 
-    <Button
-        android:id="@+id/getStartedBtn"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_48sdp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:backgroundTint="#00BCD4"
-        android:text="@string/get_started"
-        android:textAllCaps="true"
-        android:textColor="#455A64"
-        android:textSize="@dimen/_14ssp"
-        app:cornerRadius="@dimen/_10sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pickStartDate" />
+            </LinearLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pickStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/radius_bg_white"
+                android:padding="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:helperText="DD/MM/YYYY"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/dateEdText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:drawableEnd="@drawable/baseline_calendar_month_24"
+                        android:focusable="false"
+                        android:hint="@string/enter_a_date"
+                        android:inputType="none"
+                        tools:ignore="KeyboardInaccessibleWidget,TextContrastCheck,VisualLintTextFieldSize" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/privacyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="19dp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:gravity="center"
+                android:text="@string/policyTxt"
+                android:textColor="#000D56"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toTopOf="@+id/getStartedBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TextSizeCheck" />
+
+            <Button
+                android:id="@+id/getStartedBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="#00BCD4"
+                android:text="@string/get_started"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="@dimen/_14ssp"
+                app:cornerRadius="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pickStartDate"
+                tools:ignore="VisualLintButtonSize" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

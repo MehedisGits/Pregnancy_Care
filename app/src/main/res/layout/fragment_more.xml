@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
             <LinearLayout
                 android:id="@+id/aboutUsLay"
                 android:layout_width="match_parent"
@@ -54,7 +55,7 @@
                 android:background="?android:attr/listDivider" />
 
             <LinearLayout
-                android:id="@+id/rateLay"
+                android:id="@+id/disclaimerLay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_8sdp"
@@ -70,14 +71,14 @@
                     android:layout_height="@dimen/_24sdp"
                     android:layout_margin="@dimen/_6sdp"
                     android:padding="@dimen/_2sdp"
-                    android:src="@drawable/rate"
-                    tools:ignore="ContentDescription" />
+                    android:src="@drawable/about"
+                    tools:ignore="ContentDescription,VisualLintBounds" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:text="@string/rate_us"
+                    android:text="@string/disclaimers"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_14ssp" />
             </LinearLayout>
@@ -159,7 +160,7 @@
                 android:background="?android:attr/listDivider" />
 
             <LinearLayout
-                android:id="@+id/disclaimerLay"
+                android:id="@+id/rateLay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_8sdp"
@@ -175,14 +176,14 @@
                     android:layout_height="@dimen/_24sdp"
                     android:layout_margin="@dimen/_6sdp"
                     android:padding="@dimen/_2sdp"
-                    android:src="@drawable/about"
-                    tools:ignore="ContentDescription,VisualLintBounds" />
+                    android:src="@drawable/rate"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:text="@string/disclaimers"
+                    android:text="@string/rate_us"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_14ssp" />
             </LinearLayout>
