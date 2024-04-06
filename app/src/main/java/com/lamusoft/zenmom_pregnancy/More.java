@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -42,12 +41,7 @@ public class More extends Fragment {
         privacyLay.setOnClickListener(v -> {
             String url = "https://sites.google.com/view/privacypolicyzenmom/%E0%A6%B9%E0%A6%AE";
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-
-            if (intent.resolveActivity(requireContext().getPackageManager()) != null) {
-                startActivity(intent);
-            } else {
-                Toast.makeText(getContext(), "No app found to handle this action", Toast.LENGTH_SHORT).show();
-            }
+            startActivity(intent);
         });
 
         disclaimerLay = view.findViewById(R.id.disclaimerLay);

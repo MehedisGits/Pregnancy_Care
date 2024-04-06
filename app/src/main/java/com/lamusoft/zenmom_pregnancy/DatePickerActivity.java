@@ -1,5 +1,6 @@
 package com.lamusoft.zenmom_pregnancy;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -32,6 +33,7 @@ public class DatePickerActivity extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private Calendar startDateCalendar;
 
+    @SuppressLint("QueryPermissionsNeeded")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,9 +84,13 @@ public class DatePickerActivity extends AppCompatActivity {
             if (startDateStr.isEmpty()) {
                 dateEdText.setError("Enter a Valid Date");
             } else {
-                startActivity(new Intent(context, MainActivity.class));
+                Intent intent = new Intent(DatePickerActivity.this, MainActivity.class);
+                intent.putExtra("fromOnboarding", true);
+                startActivity(intent);
+                finish(); // Finish the Onboarding activity
             }
         });
+
 
     }
 

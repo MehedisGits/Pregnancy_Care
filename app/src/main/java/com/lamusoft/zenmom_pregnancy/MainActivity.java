@@ -1,7 +1,9 @@
 package com.lamusoft.zenmom_pregnancy;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -16,7 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     private final BottomNavigationView.OnNavigationItemSelectedListener navListener = this::onNavigationItemSelected;
-
+    private boolean backPressedOnce = false;
 
     //Start On Create Method >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     @Override
@@ -56,6 +58,35 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedfragment).commit();
         return true;
     }
+
+    @Override
+    public void onBackPressed() {
+        // Check if the main activity was started from the Onboarding activity
+        boolean fromOnboarding = getIntent().getBooleanExtra("fromOnboarding", false);
+        if (fromOnboarding) {
+            // If it was started from Onboarding, exit the app directly
+            finishAffinity(); // Finish all activities in the task
+        } else {
+            // If not, handle the back press event accordingly
+            if (backPressedOnce) {
+                // If back is pressed again within a short time, exit the app
+                super.onBackPressed();
+                finishAffinity(); // Finish all activities in the task
+            } else {
+                // Show a toast message indicating to press back again to exit
+                Toast.makeText(getApplicationContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+
+                // Set backPressedOnce to true to track the first back press
+                backPressedOnce = true;
+
+                // Reset backPressedOnce after a certain delay (e.g., 2 seconds)
+                new Handler().postDelayed(() -> backPressedOnce = false, 2000);
+            }
+        }
+    }
+
+
+
 }
 //Menu Integration End===========================================
 
