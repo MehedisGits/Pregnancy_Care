@@ -31,6 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_6sdp"
                 android:background="@drawable/bg_circle"
+                android:fontFamily="@font/unicode"
                 android:gravity="center"
                 android:padding="@dimen/_6sdp"
                 android:text="@string/earlySigns"
@@ -68,8 +69,8 @@
                             android:layout_width="@dimen/_32sdp"
                             android:layout_height="@dimen/_40sdp"
                             android:layout_margin="@dimen/_4sdp"
-                            android:contentDescription="@string/offline_dialog_image_description"
-                            android:src="@drawable/missed_period" />
+                            android:src="@drawable/missed_period"
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:id="@+id/textView76"
@@ -110,8 +111,9 @@
                             android:layout_width="@dimen/_32sdp"
                             android:layout_height="@dimen/_40sdp"
                             android:layout_margin="@dimen/_4sdp"
-                            android:contentDescription="@string/offline_dialog_image_description"
-                            android:src="@drawable/morning_sickness" />
+                            android:src="@drawable/morning_sickness"
+
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -158,8 +160,9 @@
                             android:layout_width="@dimen/_32sdp"
                             android:layout_height="@dimen/_40sdp"
                             android:layout_margin="@dimen/_4sdp"
-                            android:contentDescription="@string/offline_dialog_image_description"
-                            android:src="@drawable/breast_changes" />
+                            android:src="@drawable/breast_changes"
+
+                            tools:ignore="ContentDescription" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -282,6 +285,7 @@
                 android:layout_margin="@dimen/_6sdp"
                 android:layout_weight="1"
                 android:background="@drawable/bg_circle"
+                android:fontFamily="@font/unicode"
                 android:gravity="center"
                 android:padding="@dimen/_6sdp"
                 android:text="@string/laterSigns"

@@ -67,7 +67,7 @@ public class DatePickerActivity extends AppCompatActivity {
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
             } else {
-                Toast.makeText(this, "No app found to handle this action", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "No app found to handle this action", Toast.LENGTH_SHORT).show();
             }
         });
 

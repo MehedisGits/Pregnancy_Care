@@ -27,13 +27,29 @@
                 android:id="@+id/trackerActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
                 android:background="@drawable/top_bg"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="@dimen/_8sdp">
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp">
 
                 <!-- Pregnancy Progress Bar Section -->
+                <TextView
+                    android:id="@+id/expectedDeliveryDateTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/expected_delivery_date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pregnancyProgressBar"
+                    app:layout_constraintVertical_bias="1.0" />
+
                 <ProgressBar
                     android:id="@+id/pregnancyProgressBar"
                     android:layout_width="@dimen/_150sdp"
@@ -43,32 +59,11 @@
                     android:max="280"
                     android:progress="0"
                     android:progressDrawable="@drawable/circular_progress_bar"
-
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <!-- Remaining Days Section -->
-                <RelativeLayout
-                    android:id="@+id/linearLayout3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:visibility="gone"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:layout_editor_absoluteX="10dp">
-
-                    <TextView
-                        android:id="@+id/textView89"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:gravity="center"
-                        android:text="@string/home"
-                        android:textColor="@color/primary"
-                        android:textSize="@dimen/_20ssp" />
-                </RelativeLayout>
 
                 <!-- Remaining Days TextView -->
                 <LinearLayout
@@ -137,6 +132,7 @@
 
                 <!-- Current Week TextViews -->
                 <LinearLayout
+                    android:id="@+id/linearLayout4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -210,7 +206,7 @@
                         android:src="@drawable/explore_btn"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        tools:ignore="ContentDescription" />
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <!-- Partner Support Section -->
@@ -227,7 +223,7 @@
                     android:contentDescription="@string/partnerSupport"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackground"
-                    tools:ignore="UnusedAttribute,SpeakableTextPresentCheck" />
+                    tools:ignore="UnusedAttribute,SpeakableTextPresentCheck,ImageContrastCheck" />
 
                 <!-- Baby Growth Section -->
                 <LinearLayout

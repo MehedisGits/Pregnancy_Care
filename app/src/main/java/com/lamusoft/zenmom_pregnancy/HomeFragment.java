@@ -23,17 +23,23 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ * @noinspection ALL
+ */
 public class HomeFragment extends Fragment {
+
     public static int GET_WEEK_NUM;
     private ConstraintLayout motherHealthGuideSection, babySizeSection, trackerActivity;
     private ImageView partnerSupport;
     private LinearLayout babyGrowthSection;
     private Context context;
     private TextView remainingDaysTV, runningWeeksNumberTV, currentWeekDayTV, completedPercentageTv;
+    private TextView expectedDeliveryDateTV; // New TextView for expected delivery date
     private Handler handler;
     private Runnable progressRunnable;
     private Calendar startDateCalendar;
     private ProgressBar pregnancyProgressbar;
+    private String startDateStr;
 
     @SuppressLint("NewApi")
     @Override
@@ -47,45 +53,74 @@ public class HomeFragment extends Fragment {
         partnerSupport = view.findViewById(R.id.partnerSupport);
         motherHealthGuideSection = view.findViewById(R.id.motherHealthGuideSection);
         babyGrowthSection = view.findViewById(R.id.babyGrowthSection);
-
         remainingDaysTV = view.findViewById(R.id.remainingDaysTextView);
         runningWeeksNumberTV = view.findViewById(R.id.numberOfWeeksTextView);
         currentWeekDayTV = view.findViewById(R.id.currentWeekDayTV);
         completedPercentageTv = view.findViewById(R.id.completedPercentageTv);
         pregnancyProgressbar = view.findViewById(R.id.pregnancyProgressBar);
         trackerActivity = view.findViewById(R.id.trackerActivity);
+        expectedDeliveryDateTV = view.findViewById(R.id.expectedDeliveryDateTextView); // Initialize the TextView
 
+        // Retrieve start date from SharedPreferences
         String PREF_FILE_KEY = "progress_pref";
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_FILE_KEY, Context.MODE_PRIVATE);
-
         String START_DATE_KEY = "start_date";
-        String startDateStr = sharedPreferences.getString(START_DATE_KEY, "");
+        startDateStr = sharedPreferences.getString(START_DATE_KEY, "");
 
-        if (startDateStr.isEmpty()) {
-            // Delay showing the popup until the fragment's view is created
-            // to avoid parent view being null
-            handler = new Handler();
-            handler.postDelayed(() -> trackerActivity.setVisibility(View.GONE), 100);
-        } else {
+        // Calculate and show the expected delivery date
+        if (!startDateStr.isEmpty()) {
             startDateCalendar = Calendar.getInstance();
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
             try {
                 Date startDate = dateFormat.parse(startDateStr);
-
                 if (startDate != null) {
                     startDateCalendar.setTime(startDate);
+                    showExpectedDeliveryDate(); // Show the expected delivery date
+                    startProgressTracker(); // Start tracking the progress
                 }
-                startProgressTracker();
             } catch (ParseException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
+        } else {
+            // Delay showing the popup until the fragment's view is created
+            // to avoid parent view being null
+            handler = new Handler();
+            handler.postDelayed(() -> trackerActivity.setVisibility(View.GONE), 100);
         }
 
+        // Set click listeners
         setClickListeners();
+
         return view;
     }
 
-    //Start Tracking the Progress
+    // Calculate and show the expected delivery date
+    private void showExpectedDeliveryDate() {
+        // Parse the start date
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        Date startDate;
+        try {
+            startDate = dateFormat.parse(startDateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return; // Handle parsing error
+        }
+
+        // Calculate the expected delivery date
+        Calendar expectedDeliveryDate = Calendar.getInstance();
+        assert startDate != null;
+        expectedDeliveryDate.setTime(startDate);
+        expectedDeliveryDate.add(Calendar.DAY_OF_YEAR, 280); // Add 280 days for the duration of pregnancy
+
+        // Format the expected delivery date
+        String formattedDeliveryDate = dateFormat.format(expectedDeliveryDate.getTime());
+
+        // Show the expected delivery date
+        String expectedDD = "Expected Delivery Date: ";
+        expectedDeliveryDateTV.setText(expectedDD + "" + formattedDeliveryDate);
+    }
+
+    // Start Tracking the Progress
     private void startProgressTracker() {
         handler = new Handler();
         progressRunnable = new Runnable() {
@@ -98,7 +133,7 @@ public class HomeFragment extends Fragment {
         handler.post(progressRunnable);
     }
 
-    //Update Progress
+    // Update Progress
     @SuppressLint("SetTextI18n")
     private void updateProgress() {
         Calendar currentDate = Calendar.getInstance();
@@ -122,13 +157,12 @@ public class HomeFragment extends Fragment {
         pregnancyProgressbar.setProgress((int) (280 - remainingDays));
     }
 
-    //Click Event Handle of All Section in Home Fragment
+    // Click Event Handle of All Section in Home Fragment
     private void setClickListeners() {
         babySizeSection.setOnClickListener(v -> startNewActivity(BabySizeMilestone.class));
         motherHealthGuideSection.setOnClickListener(v -> startNewActivity(ComprehensiveGuideActivity.class));
         babyGrowthSection.setOnClickListener(v -> startNewActivity(FetalDevelopmentChart.class));
         partnerSupport.setOnClickListener(v -> startNewActivity(PartnerSupport.class));
-
     }
 
     // Event On ClickListen==============
@@ -145,5 +179,4 @@ public class HomeFragment extends Fragment {
             handler.removeCallbacks(progressRunnable);
         }
     }
-
 }

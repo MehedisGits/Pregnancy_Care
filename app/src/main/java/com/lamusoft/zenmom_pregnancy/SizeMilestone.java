@@ -18,12 +18,19 @@ public class SizeMilestone extends Fragment {
     private String compare;
     private String url;
 
+    // Default constructor
+    public SizeMilestone() {
+        // Required empty public constructor
+    }
+
+    // Constructor with parameters
     public SizeMilestone(String url, String compareTV, String length, String weight) {
         this.url = url;
         this.compare = compareTV;
         this.length = length;
         this.weight = weight;
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

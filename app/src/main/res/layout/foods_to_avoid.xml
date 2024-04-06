@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary"
@@ -28,8 +29,8 @@
                     android:id="@+id/foodstoavoidImage"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_160sdp"
-                    android:contentDescription="@string/offline_dialog_image_description"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    tools:ignore="ContentDescription" />
             </androidx.cardview.widget.CardView>
 
             <TextView
